@@ -25,9 +25,9 @@ DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 print(
     f"Training on {DEVICE} using PyTorch {torch.__version__} and Flower {fl.__version__}"
 )
-NUM_ROUNDS = 500
+NUM_ROUNDS = 5
 BATCH_SIZE = 1
-NUM_CLIENTS = 1
+NUM_CLIENTS = 2
 
 
 
@@ -52,27 +52,30 @@ def getData(NUM_CLIENTS, x, y, x_test, y_test):
         dy_test.append([y_test[i]])
 
 
-    datasets = []
-    
+    X_train = []
+    y_train = []
     for i in range (NUM_CLIENTS):
         tensor_x = torch.Tensor(dx[i]) # transform to torch tensor
         tensor_y = torch.Tensor(dy[i])
         tensor_y = tensor_y.type(torch.LongTensor)
 
-        my_dataset = TensorDataset(tensor_x,tensor_y) # create your datset
+        #my_dataset = TensorDataset(tensor_x,tensor_y) # create your datset
 
-        datasets.append(my_dataset)
+        X_train.append(tensor_x)
+        y_train.append(tensor_y)
 
     tensor_x_test = torch.Tensor(dx_test) # transform to torch tensor
     tensor_y_test = torch.Tensor(dy_test)
     tensor_y_test = tensor_y_test.type(torch.LongTensor)
 
-    testloader = TensorDataset(tensor_x_test,tensor_y_test) # create your datset
+    #testloader = TensorDataset(tensor_x_test,tensor_y_test) # create your datset
 
         
-    return datasets, testloader
+    return X_train, y_train, tensor_x_test, tensor_y_test
 
 
+if __name__ == "main":
+    pass
 
 (x_train, y_train_loader), (x_test, y_test_loader) = tf.keras.datasets.mnist.load_data()
 x_train = x_train.reshape((-1, 1, 28, 28)).astype(np.float32)
@@ -85,7 +88,7 @@ x_test = x_test / 255.
 
 trainloaders, testloader = getData(NUM_CLIENTS, x_train_loader, y_train_loader, x_test, y_test_loader)
 
-
+#print(len(trainloaders[0]))
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -111,7 +114,7 @@ def train(net, trainloader, epochs: int, verbose=False):
     optimizer = torch.optim.SGD(net.parameters(), lr=0.00002)
 
     # optimizer = torch.optim.Adam(net.parameters())
-    net.train()
+    #net.train()
     for epoch in range(epochs):
         correct, total, epoch_loss = 0, 0, 0.0
         for images, labels in trainloader:
@@ -139,7 +142,7 @@ def test(net, testloader):
     """Evaluate the network on the entire test set."""
     criterion = torch.nn.CrossEntropyLoss()
     correct, total, loss = 0, 0, 0.0
-    net.eval()
+    #net.eval()
     with torch.no_grad():
         for images, labels in testloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
@@ -270,9 +273,11 @@ strategy_qFedAvg = fl.server.strategy.QFedAvg(
     evaluate_fn = evaluate,
 )
 
+if __name__ == "main":
+    pass
 
 # Specify client resources if you need GPU (defaults to 1 CPU and 0 GPU)
-client_resources = None
+client_resources = {"num_cpus": 1}
 if DEVICE.type == "cuda":
     client_resources = {"num_gpus": 1}
 
