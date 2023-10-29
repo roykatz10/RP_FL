@@ -10,6 +10,7 @@ import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, random_split, TensorDataset
 from torchvision.datasets import MNIST
+from flwr.common.parameter import ndarrays_to_parameters, parameters_to_ndarrays
 
 from typing import Dict, List, Optional, Tuple
 
@@ -39,8 +40,9 @@ DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 
 #print(len(trainloaders[0]))
 class Net(nn.Module):
-    def __init__(self):
+    def __init__(self, lr):
         super(Net, self).__init__()
+        self.lr = lr
         self.flatten = nn.Flatten()
         self.linear_relu_stack = nn.Sequential(
             nn.Linear(784, 128),
@@ -67,10 +69,10 @@ class Net(nn.Module):
         self.load_state_dict(state_dict, strict=True)
 
 
-    def train(self, trainloader, epochs: int, verbose=False):
+    def train(self, trainloader, epochs: int, verbose=False, admm= False, **kwargs):
         """Train the network on the training set."""
         criterion = torch.nn.CrossEntropyLoss()
-        optimizer = torch.optim.SGD(self.parameters(), lr=0.00002)
+        optimizer = torch.optim.SGD(self.parameters(), lr=self.lr)
 
         # optimizer = torch.optim.Adam(net.parameters())
         #net.train()
@@ -113,14 +115,10 @@ class Net(nn.Module):
         return loss, accuracy
 
 
-
-
-
-
 class FlowerClient(fl.client.NumPyClient):
-    def __init__(self, X_train, y_train):
-        self.net = Net()
-
+    def __init__(self, X_train, y_train, lr):
+        self.net = Net(lr)
+        self.lr = lr
         train_loader = TensorDataset(X_train, y_train)
         #test_loader = TensorDataset(X_test, y_test)
         self.trainloader = train_loader
@@ -130,19 +128,22 @@ class FlowerClient(fl.client.NumPyClient):
         return self.net.get_parameters()
     
     def set_parameters(self, parameters, config):
-        self.net.set_parameters(parameters)
+        if self.use_admm == False: #admm uses local params
+            self.net.set_parameters(parameters)
 
     def fit(self, parameters, config):
         self.set_parameters(parameters, config)
-        self.net.train(self.trainloader, epochs=1)
+        if self.use_admm:
+            self.train_admm(config, parameters, self.admm_kwargs)
+        else:
+            self.net.train(self.trainloader, epochs=1)
         return self.get_parameters({}), len(self.trainloader), {}
 
     def evaluate(self, parameters, config):
         self.net.set_parameters(parameters)
         loss, accuracy = self.net.test(self.valloader)
         return float(loss), len(self.valloader), {"accuracy": float(accuracy)}
-
-
+       
 
 
 def from_file(id):

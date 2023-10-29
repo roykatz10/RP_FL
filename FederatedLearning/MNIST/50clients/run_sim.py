@@ -1,11 +1,52 @@
 import flwr as fl
 from multipleiid2 import FlowerClient, Net, from_file
 import torch
-from run_server import evaluate
+import numpy as np
+import os
+from torch.utils.data import TensorDataset
+from typing import Dict, List, Optional, Tuple
+import matplotlib.pyplot as plt
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
-NUM_CLIENTS = 50
+# from run_server import evaluate
+
+NUM_CLIENTS = 2
 NUM_ROUNDS = 100
+LEARNING_RATE = 0.0001
 DEVICE = torch.device("cpu")
+
+
+server_accuracies = np.zeros(NUM_ROUNDS)
+X_test = torch.load(f"{dir_path}/Data/x_test.pt")
+y_test = torch.load(f"{dir_path}/Data/y_test.pt")
+testloader = TensorDataset(X_test, y_test)
+params  = Net(0.1, use_admm=False).get_parameters()
+
+
+
+# The `evaluate` function will be by Flower called after every round
+def evaluate(
+    server_round: int,
+    parameters: fl.common.NDArrays,
+    config: Dict[str, fl.common.Scalar],
+) -> Optional[Tuple[float, Dict[str, fl.common.Scalar]]]:\
+
+    net = Net().to(DEVICE)
+    net.set_parameters(parameters)  # Update model with the latest parameters
+    loss, accuracy = net.test(testloader)
+    server_accuracies[server_round - 1] = accuracy
+    print('round:     ', server_round)
+    if(server_round == NUM_ROUNDS):
+        plt.plot(server_accuracies)
+        plt.xlabel("Epoch number")
+        plt.ylabel("Accuracy")
+        plt.title("Accuracy of FedProx CNN on IID dataset equal distribution")
+        plt.show()
+        print('server accuracies: ', server_accuracies)
+    print(f"Server-side evaluation loss {loss} / accuracy {accuracy}")
+    return loss, {"accuracy": accuracy}
+
+
 
 # Create FedAvg strategy
 strategy_avg = fl.server.strategy.FedAvg(
@@ -18,27 +59,9 @@ strategy_avg = fl.server.strategy.FedAvg(
 )
 
 
-# # The `evaluate` function will be by Flower called after every round
-# def evaluate(
-#     server_round: int,
-#     parameters: fl.common.NDArrays,
-#     config: Dict[str, fl.common.Scalar],
-# ) -> Optional[Tuple[float, Dict[str, fl.common.Scalar]]]:\
 
-#     net = Net().to(DEVICE)
-#     net.set_parameters(parameters)  # Update model with the latest parameters
-#     loss, accuracy = net.test(testloader)
-#     server_accuracies[server_round - 1] = accuracy
-#     print('round:     ', server_round)
-#     if(server_round == NUM_ROUNDS):
-#         plt.plot(server_accuracies)
-#         plt.xlabel("Epoch number")
-#         plt.ylabel("Accuracy")
-#         plt.title("Accuracy of FedProx CNN on IID dataset equal distribution")
-#         plt.show()
-#         print('server accuracies: ', server_accuracies)
-#     print(f"Server-side evaluation loss {loss} / accuracy {accuracy}")
-#     return loss, {"accuracy": accuracy}
+
+
 
 
 def client_fn(cid: str) -> FlowerClient:
@@ -55,7 +78,7 @@ def client_fn(cid: str) -> FlowerClient:
     #valloader = trainloader
 
     # Create a  single Flower client representing a single organization
-    return FlowerClient(X_train, y_train)
+    return FlowerClient(X_train, y_train, LEARNING_RATE, use_admm=True)
 
 client_resources = {"num_cpus": 1}
 
