@@ -20,7 +20,9 @@ from flwr.common import Metrics
 import tensorflow as tf
 
 from multipleiid import getData
-NUM_CLIENTS = 50
+
+
+NUM_CLIENTS = 10
 
 (x_train, y_train_loader), (x_test, y_test_loader) = tf.keras.datasets.mnist.load_data()
 
@@ -39,8 +41,8 @@ X_trains, y_trains, x_test, y_test = getData(NUM_CLIENTS, x_train_loader, y_trai
 
 
 for i, (X_train, y_train) in enumerate(zip(X_trains, y_trains)):
-    torch.save(X_train, f'X_train_id{i}.pt')
-    torch.save(y_train, f'y_train_id{i}.pt')
+    torch.save(X_train, f'10c_X_train_id{i}.pt')
+    torch.save(y_train, f'10c_y_train_id{i}.pt')
 
-torch.save(x_test, "x_test.pt")
-torch.save(y_test, "y_test.pt")
+torch.save(x_test, "10c_x_test.pt")
+torch.save(y_test, "10c_y_test.pt")

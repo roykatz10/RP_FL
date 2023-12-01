@@ -27,7 +27,7 @@ print(
 )
 NUM_ROUNDS = 5
 BATCH_SIZE = 1
-NUM_CLIENTS = 2
+NUM_CLIENTS = 10
 
 
 
@@ -75,18 +75,18 @@ def getData(NUM_CLIENTS, x, y, x_test, y_test):
 
 
 if __name__ == "main":
-    pass
 
-(x_train, y_train_loader), (x_test, y_test_loader) = tf.keras.datasets.mnist.load_data()
-x_train = x_train.reshape((-1, 1, 28, 28)).astype(np.float32)
-x_test = x_test.reshape((-1, 1, 28, 28)).astype(np.float32)
-y_train_loader = y_train_loader.astype(np.int64)
-y_test_loader = y_test_loader.astype(np.int64)
-x_train_loader = x_train / 255.
-x_test = x_test / 255.
-# x_train_loader, x_test_loader = x_train[..., np.newaxis]/255.0, x_test[..., np.newaxis]/255.0
 
-trainloaders, testloader = getData(NUM_CLIENTS, x_train_loader, y_train_loader, x_test, y_test_loader)
+    (x_train, y_train_loader), (x_test, y_test_loader) = tf.keras.datasets.mnist.load_data()
+    x_train = x_train.reshape((-1, 1, 28, 28)).astype(np.float32)
+    x_test = x_test.reshape((-1, 1, 28, 28)).astype(np.float32)
+    y_train_loader = y_train_loader.astype(np.int64)
+    y_test_loader = y_test_loader.astype(np.int64)
+    x_train_loader = x_train / 255.
+    x_test = x_test / 255.
+    # x_train_loader, x_test_loader = x_train[..., np.newaxis]/255.0, x_test[..., np.newaxis]/255.0
+
+    trainloaders, testloader = getData(NUM_CLIENTS, x_train_loader, y_train_loader, x_test, y_test_loader)
 
 #print(len(trainloaders[0]))
 class Net(nn.Module):
@@ -275,17 +275,16 @@ strategy_qFedAvg = fl.server.strategy.QFedAvg(
 
 if __name__ == "main":
     pass
+    # # Specify client resources if you need GPU (defaults to 1 CPU and 0 GPU)
+    # client_resources = {"num_cpus": 1}
+    # if DEVICE.type == "cuda":
+    #     client_resources = {"num_gpus": 1}
 
-# Specify client resources if you need GPU (defaults to 1 CPU and 0 GPU)
-client_resources = {"num_cpus": 1}
-if DEVICE.type == "cuda":
-    client_resources = {"num_gpus": 1}
-
-# Start simulation
-fl.simulation.start_simulation(
-    client_fn=client_fn,
-    num_clients=NUM_CLIENTS,
-    config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS),
-    strategy=strategy_avg,
-    client_resources=client_resources,
-)
+    # # Start simulation
+    # fl.simulation.start_simulation(
+    #     client_fn=client_fn,
+    #     num_clients=NUM_CLIENTS,
+    #     config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS),
+    #     strategy=strategy_avg,
+    #     client_resources=client_resources,
+    # )
