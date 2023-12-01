@@ -20,7 +20,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-from common.client import Net, FlowerClient
+from src.client import Net, FlowerClient
 
 
 import flwr as fl
@@ -107,14 +107,14 @@ class ADMM_FlowerClient(FlowerClient):
         self.train_admm(config, state_dict, opt)
         # self.train_admm(config, parameters, opt)
         params = self.get_parameters({})
-        # params_tobytes = OrderedDict()
-        # for key in self.net.y.keys():
-        #     #print(f'fit: y param {key} type : {type(self.net.y[key])}')
-        #     params_tobytes[key] = self.net.y[key].detach().numpy().tolist()
+        params_tobytes = OrderedDict()
+        for key in self.net.y.keys():
+            #print(f'fit: y param {key} type : {type(self.net.y[key])}')
+            params_tobytes[key] = self.net.y[key].detach().numpy().tolist()
 
-        # y_bytes = json.dumps(params_tobytes).encode("utf-8")
+        y_bytes = json.dumps(params_tobytes).encode("utf-8")
         #return params, len(self.trainloader), {"Y" : y_bytes}
-        return params, len(self.trainloader), {"Y" : self.net.y}
+        return params, len(self.trainloader), {"Y" : y_bytes}
     
     def train_admm(self, config, z, opt, until_convergence = False, t = 0, max_epochs = 100):
         #self.local_model = np.copy(parameters_to_ndarrays(self.parameters))

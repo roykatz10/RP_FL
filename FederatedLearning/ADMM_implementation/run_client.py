@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
-from common.utils import from_file
+from src.utils import from_file
 from src.ADMM_model import ADMM_FlowerClient
 
 #sys.path.insert(1, os.path.join(sys.path[0], '..'))

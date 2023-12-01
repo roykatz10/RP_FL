@@ -1,5 +1,5 @@
 #!/bin/bash
-nc=3
+nc=2
 nro=10
 str=5
 lr=0.1
@@ -18,7 +18,7 @@ done
 
 python run_server.py --str $str --nro $nro --nc $nc --rho $rho &
 
-
+sleep 3
 
 for ((i = 0; i<=$nc-1; i++))
 do 

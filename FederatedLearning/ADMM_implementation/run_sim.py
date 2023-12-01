@@ -18,8 +18,8 @@ import matplotlib.pyplot as plt
 # from run_server import evaluate
 # from fifty_clients import run_sim
 # from fifty_clients import multipleiid2
-from common.client import Net, FlowerClient
-from common.utils import from_file
+from src.client import Net, FlowerClient
+from src.utils import from_file
 from torch.utils.data import TensorDataset
 
 
@@ -48,7 +48,7 @@ def evaluate(
 ) -> Optional[Tuple[float, Dict[str, fl.common.Scalar]]]:
     
 
-    data_path = dir_path + "/../10clients"
+    data_path = dir_path + "/../MNIST/10clients"
     X_test = torch.load(f"{data_path}/Data/x_test.pt")
     y_test = torch.load(f"{data_path}/Data/y_test.pt")
     testloader = TensorDataset(X_test, y_test)

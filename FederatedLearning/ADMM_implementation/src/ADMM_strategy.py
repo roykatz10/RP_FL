@@ -5,6 +5,7 @@ from flwr.server.client_manager import ClientManager
 from flwr.server.client_proxy import ClientProxy
 import numpy as np
 from flwr.common.parameter import parameters_to_ndarrays, ndarrays_to_parameters
+import json
 
 class ADMMStrategy(fl.server.strategy.FedAvg):
 
@@ -23,12 +24,14 @@ class ADMMStrategy(fl.server.strategy.FedAvg):
         y_list = []
 
         for _, res in results:
-            keys = res.metrics["Y"].keys()
+            # 
+            y_local = json.loads(res.metrics["Y"].decode("utf-8"))
+            keys = y_local.keys()
             parameters = res.parameters
             params_dict = zip(keys, parameters_to_ndarrays(parameters))
             state_dict = OrderedDict({k: np.array(v) for k, v in params_dict})
             X_list.append(state_dict)
-            y_list.append(res.metrics["Y"])
+            y_list.append(y_local)
         y = np.array(y_list, dtype=object)
         X = np.array(X_list, dtype=object)
         # print(f'X: {X[0]}')
@@ -46,7 +49,8 @@ class ADMMStrategy(fl.server.strategy.FedAvg):
             if self.rho != 0:
             # idk why but this way it does work
                 for i in range(num_clients):
-                    y_arr[i,...] = y[i][para] * (1/self.rho)
+                    # print(type(y[i][para][0][0]))
+                    y_arr[i,...] = np.array(y[i][para]) * (1/self.rho)
             par_list = np.array([X_local[para] for X_local in X])
             # y_list = np.array([y[i][para] for i in range(num_clients)])
             # y_list = y_list * (1/self.rho)

@@ -13,10 +13,8 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
-# TODO: change this to the 'correct 10 client data
-data_path = dir_path + "/../../10clients"
-from common.client import Net
-
+# TODO: change this to be non-hardcoded (for other datasets)
+data_path = dir_path + "/../../MNIST/10clients"
 
 def from_file(id):
     X_train = torch.load(f"{data_path}/Data/X_train_id{id}.pt") 

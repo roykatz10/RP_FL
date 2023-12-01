@@ -24,8 +24,9 @@ NUM_ROUNDS = args.nro
 DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 
 server_accuracies = np.zeros(NUM_ROUNDS)
-X_test = torch.load(f"{dir_path}/../10clients/Data/x_test.pt")
-y_test = torch.load(f"{dir_path}/../10clients/Data/y_test.pt")
+# TODO: un-hardcode this for multiple datasets
+X_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/x_test.pt")
+y_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/y_test.pt")
 testloader = TensorDataset(X_test, y_test)
 params  = Net(0.1, 0.5).get_parameters()
 
