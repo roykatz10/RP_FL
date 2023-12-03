@@ -15,7 +15,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--nro", type=int, default = 5)
-parser.add_argument("--nc", type=int, default = 50)
+# parser.add_argument("--nc", type=int, default = 50)
 
 # 0 = FedAvg
 # 1 = FedProx
@@ -24,18 +24,33 @@ parser.add_argument("--nc", type=int, default = 50)
 # 4 = qFedAvg
 parser.add_argument("--strat", type=int, default = 0)
 
-# 0 = 50 clients_iid
+# 0 = 50 clients iid
+# 1 = 50 clients niid
+# 2 = 10 clients iid ed
+# 3 = 10 clients niid ed
 parser.add_argument("--scen", type=int, default = 0)
 args = parser.parse_args()
 
 NUM_ROUNDS = args.nro
-NUM_CLIENTS = args.nc
+# NUM_CLIENTS = args.nc
 NUM_STRAT = args.strat
 NUM_SCENARIO = args.scen
 DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 
 if NUM_SCENARIO == 0:
     scen_dir = "Data_50clients_iid"
+    NUM_CLIENTS = 50
+elif NUM_SCENARIO == 1:
+    scen_dir = "Data_50clients_niid"
+    NUM_CLIENTS = 50
+elif NUM_SCENARIO == 2:
+    scen_dir = "Data_10clients_iid_ed"
+    NUM_CLIENTS = 10
+elif NUM_SCENARIO == 3:
+    scen_dir = "Data_10clients_niid_ed"
+    NUM_CLIENTS = 10
+
+
 
 server_accuracies = np.zeros(NUM_ROUNDS)
 # print(f"{dir_path}/Data/x_test.pt")
@@ -111,8 +126,6 @@ elif NUM_STRAT == 4:
         min_available_clients=1,  # Wait until all 10 clients are available
         evaluate_fn=evaluate,
     )
-
-
 
 
 
