@@ -28,6 +28,8 @@ parser.add_argument("--strat", type=int, default = 0)
 # 1 = 50 clients niid
 # 2 = 10 clients iid ed
 # 3 = 10 clients niid ed
+# 4 = 10 clients iid ned
+# 5 = 10 clients niid ned
 parser.add_argument("--scen", type=int, default = 0)
 args = parser.parse_args()
 
@@ -48,6 +50,12 @@ elif NUM_SCENARIO == 2:
     NUM_CLIENTS = 10
 elif NUM_SCENARIO == 3:
     scen_dir = "Data_10clients_niid_ed"
+    NUM_CLIENTS = 10
+elif NUM_SCENARIO == 4:
+    scen_dir = "Data_10clients_iid_ned"
+    NUM_CLIENTS = 10
+elif NUM_SCENARIO == 5:
+    scen_dir = "Data_10clients_niid_ned"
     NUM_CLIENTS = 10
 
 

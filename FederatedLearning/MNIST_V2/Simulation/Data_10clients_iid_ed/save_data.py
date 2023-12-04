@@ -58,6 +58,19 @@ X_trains, y_trains, x_test, y_test = getData(NUM_CLIENTS, x_train_loader, y_trai
 #print(X_train[0].size())
 #print(x_test.size())
 
+# counts_for_each_sublist = []
+#
+# # Iterate through each list in the list of lists
+# for sublist in y_trains:
+#     # Initialize a list to store counts for each number in the sublist
+#     count_list = [0] * 10
+#     for num in sublist:
+#         # Increment the count for each number in its respective position
+#         count_list[num] += 1
+#     counts_for_each_sublist.append(count_list)
+#
+# print(counts_for_each_sublist)
+
 
 for i, (X_train, y_train) in enumerate(zip(X_trains, y_trains)):
     torch.save(X_train, f'X_train_id{i}.pt')
