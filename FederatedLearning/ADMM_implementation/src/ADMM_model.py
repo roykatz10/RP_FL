@@ -25,7 +25,7 @@ from src.client import Net, FlowerClient
 
 import flwr as fl
 from flwr.common import Metrics, NDArrays, Scalar
-import tensorflow as tf
+#import tensorflow as tf
 
 
 
