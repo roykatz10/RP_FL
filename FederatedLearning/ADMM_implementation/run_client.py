@@ -18,10 +18,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--cid", type=int, default=0)
 parser.add_argument("--lr", type=float, default=0.1)
 parser.add_argument("--rho", type=float, default=0.5)
+parser.add_argument("--dset", type=str, default="MNIST_10c")
 
 args = parser.parse_args()
 
-X_train, y_train = from_file(args.cid)
+X_train, y_train = from_file(args.dset, args.cid)
 # X_test = torch.load("Data/x_test.pt")
 # y_test = torch.load("Data/y_test.pt")
 

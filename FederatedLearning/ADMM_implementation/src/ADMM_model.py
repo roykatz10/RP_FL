@@ -31,8 +31,12 @@ import tensorflow as tf
 
 
 
+if torch.cuda.is_available():
+    device = "cuda"
+else:
+    device = "cpu"
 
-DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
+DEVICE = torch.device(device)  # Try "cuda" to train on GPU
 
 #print(len(trainloaders[0]))
 class ADMM_Net(Net):
@@ -86,7 +90,7 @@ class ADMM_Net(Net):
 class ADMM_FlowerClient(FlowerClient):
     def __init__(self, X_train, y_train, lr, rho):
         super().__init__(X_train, y_train, lr)
-        self.net = ADMM_Net(lr, rho)
+        self.net = ADMM_Net(lr, rho).to(device=DEVICE)
         self.lr = lr
 
     # this does not give y at the moment, could consider changing that
@@ -128,6 +132,6 @@ class ADMM_FlowerClient(FlowerClient):
             max_epochs = 1
         while (error > t) and (lepochs < max_epochs):
             # print(f'local epoch: {lepochs}')
-            self.net.train_admm(self.trainloader, z, opt, epochs = 1)
-            error, _ = self.net.test(self.valloader)
+            self.net.train_admm(self.trainloader.to(device=DEVICE), z, opt, epochs = 1)
+            error, _ = self.net.test(self.valloader.to(device=DEVICE))
             lepochs += 1

@@ -16,7 +16,17 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # TODO: change this to be non-hardcoded (for other datasets)
 data_path = dir_path + "/../../MNIST/10clients"
 
-def from_file(id):
+def from_file(dset, id):
+    if dset == "MNIST_10c":
+        data_path = dir_path + "/../../MNIST/10clients"
+    elif dset == "MNIST_50c":
+        data_path = dir_path + "/../../MNIST/50clients"
+    elif dset == "kinase":
+        data_path = dir_path + "/../.."
+    elif dset == "camelyon":
+        data_path = dir_path + "/../../camelyon"
+    else:
+        raise(ValueError("unknown dataset"))
     X_train = torch.load(f"{data_path}/Data/X_train_id{id}.pt") 
     y_train = torch.load(f"{data_path}/Data/y_train_id{id}.pt")
     return X_train, y_train
