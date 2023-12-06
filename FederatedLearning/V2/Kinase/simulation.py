@@ -10,15 +10,34 @@ from keras import backend as K
 import os
 from typing import Dict, List, Optional, Tuple
 import torch
+import argparse
 
 
+
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--nro", type=int, default = 5)
+
+# 0 = FedAvg
+# 1 = FedProx
+# 2 = FedMedian
+# 3 = FedYogi
+# 4 = qFedAvg
+parser.add_argument("--strat", type=int, default = 0)
+
+
+args = parser.parse_args()
+
+NUM_ROUNDS = args.nro
+NUM_STRAT = args.strat
 
 DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 print(
     f"Training on {DEVICE} using PyTorch {torch.__version__} and Flower {fl.__version__}"
 )
 
-NUM_ROUNDS = 500
 NUM_CLIENTS = 3
 
 
@@ -208,6 +227,28 @@ strategy_fedyogi = fl.server.strategy.FedYogi(
     evaluate_fn = evaluate,
 )
 
+strategy_qfedavg = fl.server.strategy.QFedAvg(
+        fraction_fit=1.0,  # Sample 100% of available clients for training
+        fraction_evaluate=1.0,  # Sample 50% of available clients for evaluation
+        min_fit_clients=3,  # Never sample less than 10 clients for training
+        min_evaluate_clients=3,  # Never sample less than 5 clients for evaluation
+        min_available_clients=3,  # Wait until all 10 clients are available
+        evaluate_fn=evaluate,
+    )
+
+
+if NUM_STRAT == 0:
+    strat = strategy_fedavg
+elif NUM_STRAT == 1:
+    strat = strategy_fedprox
+elif NUM_STRAT == 2:
+    strat = strategy_fedmedian
+elif NUM_STRAT == 3:
+    strat = strategy_fedyogi
+elif NUM_STRAT == 4:
+    strat = strategy_qfedavg
+
+
 # Start Flower server for three rounds of federated learning
 client_resources = None
 if DEVICE.type == "cuda":
@@ -221,6 +262,6 @@ fl.simulation.start_simulation(
     client_fn=client_fn,
     num_clients=NUM_CLIENTS,
     config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS, round_timeout=6000.0),
-    strategy=strategy_fedmedian,
+    strategy=strat,
     client_resources=client_resources,
 )
