@@ -40,22 +40,22 @@ NUM_SCENARIO = args.scen
 DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 
 if NUM_SCENARIO == 0:
-    scen_dir = "Data_50clients_iid"
+    scen_dir = "../../Data/Data_MNIST/Data_50clients_iid"
     NUM_CLIENTS = 50
 elif NUM_SCENARIO == 1:
-    scen_dir = "Data_50clients_niid"
+    scen_dir = "../../Data/Data_MNIST/Data_50clients_niid"
     NUM_CLIENTS = 50
 elif NUM_SCENARIO == 2:
-    scen_dir = "Data_10clients_iid_ed"
+    scen_dir = "../../Data/Data_MNIST/Data_10clients_iid_ed"
     NUM_CLIENTS = 10
 elif NUM_SCENARIO == 3:
-    scen_dir = "Data_10clients_niid_ed"
+    scen_dir = "../../Data/Data_MNIST/Data_10clients_niid_ed"
     NUM_CLIENTS = 10
 elif NUM_SCENARIO == 4:
-    scen_dir = "Data_10clients_iid_ned"
+    scen_dir = "../../Data_10clients_iid_ned"
     NUM_CLIENTS = 10
 elif NUM_SCENARIO == 5:
-    scen_dir = "Data_10clients_niid_ned"
+    scen_dir = "../../Data/Data_MNIST/Data_10clients_niid_ned"
     NUM_CLIENTS = 10
 
 
