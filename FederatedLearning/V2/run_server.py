@@ -68,40 +68,40 @@ strategy_avg = fl.server.strategy.FedAvg(
 )
 
 strategy_prox = fl.server.strategy.FedProx(
-    fraction_fit=0.13,  # Sample 100% of available clients for training
+    fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=7,  # Never sample less than 10 clients for training
+    min_fit_clients=1,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=7,  # Wait until all 10 clients are available
+    min_available_clients=1,  # Wait until all 10 clients are available
     proximal_mu = 0.0005,
     evaluate_fn = evaluate,
 )
 
 strategy_median = fl.server.strategy.FedMedian(
-    fraction_fit=0.13,  # Sample 100% of available clients for training
+    fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=7,  # Never sample less than 10 clients for training
+    min_fit_clients=1,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=7,  # Wait until all 10 clients are available
+    min_available_clients=1,  # Wait until all 10 clients are available
     evaluate_fn = evaluate,
 )
 
 strategy_yogi = fl.server.strategy.FedYogi(
-    fraction_fit=0.13,  # Sample 100% of available clients for training
+    fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=7,  # Never sample less than 10 clients for training
+    min_fit_clients=1,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=7,  # Wait until all 10 clients are available
+    min_available_clients=1,  # Wait until all 10 clients are available
     initial_parameters=fl.common.ndarrays_to_parameters(params),
     evaluate_fn = evaluate,
 )
 
 strategy_qFedAvg = fl.server.strategy.QFedAvg(
-    fraction_fit=0.13,  # Sample 100% of available clients for training
+    fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=7,  # Never sample less than 10 clients for training
+    min_fit_clients=1,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=7,  # Wait until all 10 clients are available
+    min_available_clients=1,  # Wait until all 10 clients are available
     evaluate_fn = evaluate,
 )
 
