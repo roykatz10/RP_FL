@@ -16,7 +16,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 # TODO: change this to be non-hardcoded (for other datasets)
 data_path = dir_path + "/../../MNIST/10clients"
 
-def from_file(dset, id):
+def from_file(dset, id, device = "cpu"):
     if dset == "MNIST_10c":
         data_path = dir_path + "/../../MNIST/10clients"
     elif dset == "MNIST_50c":
@@ -27,6 +27,6 @@ def from_file(dset, id):
         data_path = dir_path + "/../../camelyon"
     else:
         raise(ValueError("unknown dataset"))
-    X_train = torch.load(f"{data_path}/Data/X_train_id{id}.pt") 
-    y_train = torch.load(f"{data_path}/Data/y_train_id{id}.pt")
+    X_train = torch.load(f"{data_path}/Data/X_train_id{id}.pt", map_location=device) 
+    y_train = torch.load(f"{data_path}/Data/y_train_id{id}.pt", map_location=device)
     return X_train, y_train

@@ -24,9 +24,13 @@ import flwr as fl
 from flwr.common import Metrics, NDArrays, Scalar
 #import tensorflow as tf
 
+if torch.cuda.is_available():
+    device = "cuda"
+else:
+    device = "cpu"
 
+DEVICE = torch.device(device)  # Try "cuda" to train on GPU
 
-DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 # print(
 #     f"Training on {DEVICE} using PyTorch {torch.__version__} and Flower {fl.__version__}"
 # )
@@ -147,8 +151,4 @@ class FlowerClient(fl.client.NumPyClient):
        
 
 
-def from_file(id):
-    X_train = torch.load(f"{dir_path}/Data/X_train_id{id}.pt") 
-    y_train = torch.load(f"{dir_path}/Data/y_train_id{id}.pt")
-    return X_train, y_train
 

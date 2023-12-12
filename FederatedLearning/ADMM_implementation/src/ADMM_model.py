@@ -36,7 +36,7 @@ if torch.cuda.is_available():
 else:
     device = "cpu"
 
-DEVICE = torch.device(device)  # Try "cuda" to train on GPU
+DEVICE = torch.device(device)  # Try "  cuda" to train on GPU
 
 #print(len(trainloaders[0]))
 class ADMM_Net(Net):
@@ -127,11 +127,11 @@ class ADMM_FlowerClient(FlowerClient):
         error = 10
         lepochs = 0
         # print(config)
-        print(f'until convergence: {until_convergence}')
+        # print(f'until convergence: {until_convergence}')
         if until_convergence == False:
             max_epochs = 1
         while (error > t) and (lepochs < max_epochs):
             # print(f'local epoch: {lepochs}')
-            self.net.train_admm(self.trainloader.to(device=DEVICE), z, opt, epochs = 1)
-            error, _ = self.net.test(self.valloader.to(device=DEVICE))
+            self.net.train_admm(self.trainloader, z, opt, epochs = 1)
+            error, _ = self.net.test(self.valloader)
             lepochs += 1
