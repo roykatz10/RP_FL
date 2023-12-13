@@ -53,6 +53,8 @@ def evaluate(
         plt.title("Accuracy of FedProx CNN on IID dataset equal distribution")
         # plt.show()
         print('server accuracies: ', server_accuracies)
+	with open("server_accuracies.npy" "wr") as f:
+		np.save(f, server_accuracies)
     print(f"Server-side evaluation loss {loss} / accuracy {accuracy}")
     return loss, {"accuracy": accuracy}
 

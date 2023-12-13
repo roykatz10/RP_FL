@@ -23,11 +23,11 @@ done
 
 python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset &
 
-sleep 3
+sleep 10
 
 for ((i = 0; i<=$nc-1; i++))
 do 
-    sleep 1
+    sleep 3
     python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} &
 done
 

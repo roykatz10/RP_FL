@@ -15,8 +15,10 @@
 
 
 module use /opt/insy/modulefiles
+module load cuda/11.5 cudnn/11.5-8.3.0.98
 module load miniconda/3.9
-conda activate /tudelft.net./staff-bulk/ewi/insy/DL/swiergarst/envs/flower2-en
+conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
+cd ..
 
-srun bash run.sh --nc 10 --nro 5 --dset=MNIST_10c
+srun bash run.sh --nc 2 --nro 3 --dset=MNIST_10c
