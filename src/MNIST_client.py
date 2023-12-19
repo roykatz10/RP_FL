@@ -48,10 +48,10 @@ class Net(nn.Module):
         state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
         self.load_state_dict(state_dict, strict=True)
 
-    def train(self, trainloader, epochs: int, verbose=False):
+    def train(self, trainloader, epochs: int, opt, verbose=False):
         """Train the network on the training set."""
         criterion = torch.nn.CrossEntropyLoss()
-        optimizer = torch.optim.SGD(self.parameters(), lr=0.00002)
+        # optimizer = torch.optim.SGD(self.parameters(), lr=0.00002)
 
         # optimizer = torch.optim.Adam(net.parameters())
         # net.train()
@@ -59,14 +59,14 @@ class Net(nn.Module):
             correct, total, epoch_loss = 0, 0, 0.0
             for images, labels in trainloader:
                 images, labels = images.to(DEVICE), labels.to(DEVICE)
-                optimizer.zero_grad()
+                opt.zero_grad()
                 # print(images)
                 outputs = self.forward(images)
                 # if(len(outputs) != labels.dim):
                 #     print('fuck:', len(outputs), labels.dim)
                 loss = criterion(outputs, labels)
                 loss.backward()
-                optimizer.step()
+                opt.step()
                 # Metrics
                 epoch_loss += loss
                 total += labels.size(0)
@@ -95,9 +95,9 @@ class Net(nn.Module):
 
 
 class FlowerClient(fl.client.NumPyClient):
-    def __init__(self, X_train, y_train):
+    def __init__(self, X_train, y_train, lr):
         self.net = Net()
-
+        self.lr = lr
         train_loader = TensorDataset(X_train, y_train)
         # test_loader = TensorDataset(X_test, y_test)
         self.trainloader = train_loader
@@ -111,7 +111,8 @@ class FlowerClient(fl.client.NumPyClient):
 
     def fit(self, parameters, config):
         self.set_parameters(parameters, config)
-        self.net.train(self.trainloader, epochs=1)
+        opt = torch.optim.SGD(self.net.parameters(), lr=self.lr)
+        self.net.train(self.trainloader, opt, epochs=1)
         return self.get_parameters({}), len(self.trainloader), {}
 
     def evaluate(self, parameters, config):
