@@ -1,28 +1,32 @@
-#!/bin/bash
-nc=2
+#!/bin/sh
+
+#SBATCH --partition=general
+#SBATCH --qos=short
+#SBATCH --time=0:30:00
+#SBATCH --ntasks=11
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mail-type=END
+#SBATCH --mem-per-cpu=2G
+
+
+module use /opt/insy/modulefiles
+module load cuda/11.5 cudnn/11.5-8.3.0.98
+module load miniconda/3.9
+conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
+
+
+nc=10
 nro=10
-str=5
+str=0
 lr=0.1
 rho=0.5
 dset="MNIST_10c"
 
-while true;
-do
-    case "$1" in
-        --nc)   nc=$2; shift 2;;
-        --nro) nro=$2; shift 2;;
-        --str)  str=$2; shift 2;;
-        --lr) lr=$2; shift 2;;
-        --rho) rho=$2; shift 2;;
-        --dset) dset=$2; shift 2;;
-        --) shift;  break   ;;
-        *)  break ;;
-    esac
-done
-
-
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}.txt"
 line_tocheck='Flower ECE: gRPC server running'
+
+cd ..
 
 # remove output file if it already exists
 if test -f "$filename"; then
@@ -30,8 +34,7 @@ if test -f "$filename"; then
 fi
 
 
-# startup server
-python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename & 
+srun  --ntasks 1 --exclusive --mem-per-cpu=2G python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename &
 
 # whole bunch of stuff to make sure we're waiting for the server over here
 finished=0
@@ -54,9 +57,9 @@ done
 
 
 for ((i = 0; i<=$nc-1; i++))
-do 
+do
     sleep 1
-    python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} &
+    srun --ntasks 1 --exclusive --mem-per-cpu=2G python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} &
 done
 
 wait $!
@@ -64,4 +67,4 @@ wait $!
 rm "$filename"
 
 
-exit
+
