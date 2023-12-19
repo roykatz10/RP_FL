@@ -34,7 +34,7 @@ if test -f "$filename"; then
 fi
 
 
-srun  --ntasks 1 --exclusive --mem-per-cpu=2G python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename &
+srun  --ntasks 1 --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename &
 
 # whole bunch of stuff to make sure we're waiting for the server over here
 finished=0
@@ -55,12 +55,15 @@ do
 done
 
 
+srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset &
 
-for ((i = 0; i<=$nc-1; i++))
-do
-    sleep 1
-    srun --ntasks 1 --exclusive --mem-per-cpu=2G python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} &
-done
+
+
+#for ((i = 0; i<=$nc-1; i++))
+#do
+#    sleep 1
+#    srun --ntasks 1 --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} &
+#done
 
 wait $!
 

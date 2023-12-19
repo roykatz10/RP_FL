@@ -1,0 +1,12 @@
+INFO flwr 2023-12-19 10:05:47,741 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=10, round_timeout=None)
+server booted up. starting clients...
+INFO flwr 2023-12-19 10:05:47,763 | app.py:168 | Flower ECE: gRPC server running (10 rounds), SSL is disabled
+INFO flwr 2023-12-19 10:05:47,764 | server.py:86 | Initializing global parameters
+INFO flwr 2023-12-19 10:05:47,764 | server.py:273 | Requesting initial parameters from one random client
+srun: Job 9199687 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 9199687 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job 9199687 step creation still disabled, retrying (Requested nodes are busy)
+slurmstepd: error: *** STEP 9199687.0 ON grs2 CANCELLED AT 2023-12-19T10:10:25 ***
+srun: error: Unable to create step for job 9199687: Job/step already completing or completed
+slurmstepd: error: *** JOB 9199687 ON grs2 CANCELLED AT 2023-12-19T10:10:25 ***

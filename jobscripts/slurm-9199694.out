@@ -1,0 +1,20 @@
+INFO flwr 2023-12-19 10:10:38,853 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=10, round_timeout=None)
+server booted up. starting clients...
+INFO flwr 2023-12-19 10:10:38,878 | app.py:168 | Flower ECE: gRPC server running (10 rounds), SSL is disabled
+INFO flwr 2023-12-19 10:10:38,879 | server.py:86 | Initializing global parameters
+INFO flwr 2023-12-19 10:10:38,879 | server.py:273 | Requesting initial parameters from one random client
+usage: run_client.py [-h] [--lr LR] [--rho RHO] [--dset DSET] [--iid IID]
+                     [--ed ED]
+run_client.py: error: argument --rho: invalid float value: '0.5--dset'
+usage: run_client.py [-h] [--lr LR] [--rho RHO] [--dset DSET] [--iid IID]
+                     [--ed ED]
+run_client.py: error: argument --rho: invalid float value: '0.5--dset'
+usage: run_client.py [-h] [--lr LR] [--rho RHO] [--dset DSET] [--iid IID]
+                     [--ed ED]
+run_client.py: error: argument --rho: invalid float value: '0.5--dset'
+srun: error: grs2: tasks 3,7: Exited with exit code 2
+srun: launch/slurm: _step_signal: Terminating StepId=9199694.1
+slurmstepd: error: *** STEP 9199694.1 ON grs2 CANCELLED AT 2023-12-19T10:10:53 ***
+slurmstepd: error: common_file_write_content: unable to open '/sys/fs/cgroup/freezer/slurm/uid_618619/job_9199694/step_1/freezer.state' for writing: Permission denied
+srun: error: grs2: tasks 0-2,4-6,8-9: Terminated
+srun: Force Terminated StepId=9199694.1
