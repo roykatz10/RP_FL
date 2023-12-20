@@ -1,0 +1,233 @@
+INFO flwr 2023-12-19 16:44:11,616 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2023-12-19 16:44:11,653 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2023-12-19 16:44:11,654 | server.py:86 | Initializing global parameters
+INFO flwr 2023-12-19 16:44:11,654 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2023-12-19 16:45:23,579 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:23,590 | server.py:277 | Received initial parameters from one random client
+INFO flwr 2023-12-19 16:45:23,591 | server.py:88 | Evaluating initial parameters
+DEBUG flwr 2023-12-19 16:45:23,585 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,585 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:23,599 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:23,603 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,603 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 16:45:23,603 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:23,605 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:23,607 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,607 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:23,609 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:23,621 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:23,625 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,625 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:23,628 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:23,766 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:23,768 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,770 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:23,773 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:23,862 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:23,866 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,866 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:23,869 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:23,914 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:23,918 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:23,918 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:23,921 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:24,061 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:24,065 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:24,065 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:24,068 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:24,104 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:24,108 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:24,108 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:24,112 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:24,348 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:24,352 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:24,352 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:24,355 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:24,812 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:24,817 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:24,817 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:24,819 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,051 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,054 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,054 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,057 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,080 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,084 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,084 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,087 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,367 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,370 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,370 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,373 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,392 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,396 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,396 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,398 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,439 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,443 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,443 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,446 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,570 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,574 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,575 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,577 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,596 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,599 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,599 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,602 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,632 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,637 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,638 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,640 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:25,727 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:25,731 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:25,732 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:25,734 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,244 | server.py:91 | initial parameters (loss, other metrics): 2.309100128650665, {'accuracy': 0.078}
+INFO flwr 2023-12-19 16:45:26,244 | server.py:101 | FL starting
+INFO flwr 2023-12-19 16:45:26,267 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,271 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,271 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,274 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,291 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:26,293 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,294 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,294 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,297 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,297 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:26,297 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,300 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,309 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,313 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,313 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,316 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,317 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,321 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,321 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,323 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,327 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,331 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,332 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,334 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,731 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,735 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,735 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,738 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,743 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,747 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,747 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,750 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,833 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,838 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,839 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,841 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,910 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:26,911 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:26,914 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,914 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,914 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,914 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,915 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 16:45:26,915 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,917 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:26,917 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:26,918 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,918 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,919 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,920 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,920 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:26,922 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:26,923 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:26,927 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:26,927 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:26,931 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,223 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,227 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,227 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,230 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,250 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,254 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,254 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,257 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,279 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,283 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,283 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,286 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,294 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,297 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,297 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,300 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,321 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,325 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,326 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,329 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,330 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:27,333 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,334 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,334 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,339 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,339 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,339 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,343 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,351 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,355 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,355 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 16:45:27,355 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,358 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,359 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,359 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,363 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,366 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,370 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,371 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 16:45:27,371 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,373 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,373 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,374 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,378 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,381 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:27,386 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,391 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,391 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,395 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 16:45:27,397 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 16:45:27,402 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,400 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,403 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 16:45:27,403 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 16:45:27,404 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,405 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,408 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,406 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,409 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,412 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,414 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,422 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 16:45:27,422 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 16:45:27,425 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 16:45:27,425 | server.py:218 | fit_round 1: strategy sampled 50 clients (out of 50)
+DEBUG flwr 2023-12-19 16:45:29,785 | server.py:232 | fit_round 1 received 50 results and 0 failures
+server strategy: ADMM
+number of clients: 50
+round:      0
+Server-side evaluation loss 2.309100128650665 / accuracy 0.078
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_server.py", line 151, in <module>
+    fl.server.start_server(config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS), strategy=strat)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/app.py", line 176, in start_server
+    hist = _fl(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/app.py", line 217, in _fl
+    hist = server.fit(num_rounds=config.num_rounds, timeout=config.round_timeout)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/server.py", line 106, in fit
+    res_fit = self.fit_round(server_round=current_round, timeout=timeout)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/server.py", line 244, in fit_round
+    ] = self.strategy.aggregate_fit(server_round, results, failures)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/ADMM_strategy.py", line 28, in aggregate_fit
+    y_local = json.loads(res.metrics["Y"].decode("utf-8"))
+KeyError: 'Y'
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9202549 ON awi13 CANCELLED AT 2023-12-19T18:14:01 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9202549.0 ON awi13 CANCELLED AT 2023-12-19T18:14:01 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9202549.1 ON awi13 CANCELLED AT 2023-12-19T18:14:01 DUE TO TIME LIMIT ***
