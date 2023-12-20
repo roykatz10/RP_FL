@@ -1,0 +1,793 @@
+INFO flwr 2023-12-19 14:26:52,241 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+server booted up. starting clients...
+INFO flwr 2023-12-19 14:26:52,276 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2023-12-19 14:26:52,276 | server.py:86 | Initializing global parameters
+INFO flwr 2023-12-19 14:26:52,276 | server.py:273 | Requesting initial parameters from one random client
+INFO flwr 2023-12-19 14:28:11,955 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:11,958 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:11,958 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:11,960 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:13,343 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:13,345 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:13,345 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:13,348 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:13,458 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:13,461 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:13,461 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:13,463 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:13,467 | server.py:277 | Received initial parameters from one random client
+INFO flwr 2023-12-19 14:28:13,467 | server.py:88 | Evaluating initial parameters
+INFO flwr 2023-12-19 14:28:13,659 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:13,662 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:13,662 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:13,664 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:13,675 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:13,677 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:13,677 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:13,679 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:13,692 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:13,694 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:13,694 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:13,697 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:13,958 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:13,960 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:13,960 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:13,963 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:14,385 | server.py:91 | initial parameters (loss, other metrics): 2.3027367549180986, {'accuracy': 0.1253}
+INFO flwr 2023-12-19 14:28:14,385 | server.py:101 | FL starting
+INFO flwr 2023-12-19 14:28:14,424 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:14,426 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:14,426 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:14,429 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:14,432 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:14,434 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:14,434 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:14,437 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:14,488 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:14,490 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:14,490 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:14,493 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:14,560 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:14,562 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:14,562 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:14,565 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,195 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:15,197 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:15,197 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:15,200 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,416 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:15,418 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:15,418 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:15,421 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,440 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:15,442 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:15,442 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:15,445 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,588 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:15,591 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:15,591 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:15,593 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,621 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:15,623 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:15,624 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:15,626 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,636 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:15,638 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:15,638 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:15,641 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:15,997 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,000 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,000 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,002 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,008 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,011 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,011 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,013 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,023 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,025 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,025 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,028 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,229 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 14:28:16,229 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,231 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,231 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,231 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,231 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,234 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,234 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,239 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,241 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,241 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,244 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,255 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,257 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,257 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,260 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,273 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,275 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,275 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,278 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,287 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,289 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,290 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,293 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,334 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,336 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,337 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,339 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,340 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,342 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,342 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 14:28:16,345 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,346 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,347 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,347 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,351 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,373 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,375 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,375 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,378 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,392 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,396 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,396 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,399 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,410 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,413 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,413 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,416 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,427 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,430 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,430 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,434 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,444 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,446 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,446 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,449 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,452 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,457 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,457 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,461 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,466 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,469 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,469 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,472 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,480 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,483 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,483 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,487 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,488 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,492 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,492 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,497 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,514 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,516 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,517 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,520 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,522 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,525 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,525 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,528 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,532 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 14:28:16,533 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,535 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,536 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,539 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,543 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 14:28:16,544 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,546 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,546 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,548 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,549 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 14:28:16,548 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-19 14:28:16,549 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,549 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,551 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,551 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,552 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,552 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,553 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,553 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-19 14:28:16,554 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,555 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,555 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,555 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,557 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,559 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,562 | connection.py:39 | ChannelConnectivity.IDLE
+INFO flwr 2023-12-19 14:28:16,562 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,563 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,564 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,564 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,566 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,568 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-19 14:28:16,568 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-19 14:28:16,569 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,571 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,574 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 14:28:16,574 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-19 14:28:16,574 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:28:16,577 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-19 14:57:28,308 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,309 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,309 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,309 | app.py:185 | Disconnect and shut down
+booting up client 29
+booting up client 39
+booting up client 27
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,309 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,309 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,309 | app.py:185 | Disconnect and shut down
+booting up client 36
+booting up client 4
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+booting up client 34
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,309 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,310 | connection.py:113 | gRPC channel closed
+booting up client 22
+booting up client 41
+booting up client 42
+DEBUG flwr 2023-12-19 14:57:28,310 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,310 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+booting up client 46
+DEBUG flwr 2023-12-19 14:57:28,310 | connection.py:113 | gRPC channel closed
+booting up client 13
+DEBUG flwr 2023-12-19 14:57:28,310 | connection.py:113 | gRPC channel closed
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+booting up client 31
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2023-12-19 14:57:28,310 | connection.py:113 | gRPC channel closed
+booting up client 3
+booting up client 1
+INFO flwr 2023-12-19 14:57:28,310 | app.py:185 | Disconnect and shut down
+booting up client 43
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+booting up client 17
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,381 | connection.py:39 | ChannelConnectivity.IDLE
+booting up client 7
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+booting up client 23
+booting up client 25
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+booting up client 37
+booting up client 40
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+booting up client 35
+booting up client 38
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+booting up client 32
+booting up client 45
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+booting up client 26
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+booting up client 30
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+booting up client 8
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,382 | connection.py:113 | gRPC channel closed
+booting up client 2
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    raise self
+    raise self
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::%5D:8080 {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.379819488+01:00"}"
+>
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.380187732+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.380057586+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.380187181+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::%5D:8080 {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.379819858+01:00"}"
+>
+    raise self
+    raise self
+    raise self
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.379881104+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380058478+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380183944+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.379907854+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380056103+01:00"}"
+>
+    raise self
+    raise self
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380171721+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.379941758+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.379874591+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380355598+01:00"}"
+>
+DEBUG flwr 2023-12-19 15:56:30,583 | connection.py:113 | gRPC channel closed
+booting up client 15
+DEBUG flwr 2023-12-19 15:56:30,584 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,584 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+booting up client 49
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,584 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,584 | connection.py:113 | gRPC channel closed
+booting up client 11
+booting up client 9
+booting up client 44
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,584 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2023-12-19 15:56:30,585 | connection.py:113 | gRPC channel closed
+booting up client 20
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,585 | connection.py:113 | gRPC channel closed
+booting up client 6
+DEBUG flwr 2023-12-19 15:56:30,585 | connection.py:113 | gRPC channel closed
+booting up client 18
+booting up client 24
+DEBUG flwr 2023-12-19 15:56:30,585 | connection.py:113 | gRPC channel closed
+booting up client 28
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+DEBUG flwr 2023-12-19 15:56:30,585 | connection.py:113 | gRPC channel closed
+booting up client 16
+DEBUG flwr 2023-12-19 15:56:30,586 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+booting up client 14
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 46, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.379855215+01:00"}"
+>
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::%5D:8080 {created_time:"2023-12-19T15:56:30.379870273+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+    raise self
+    raise self
+    raise self
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::%5D:8080 {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.379819658+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::%5D:8080 {created_time:"2023-12-19T15:56:30.379819638+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+    raise self
+    raise self
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.379874571+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.380059189+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380056154+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380184055+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.380060382+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+    raise self
+    raise self
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380183995+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2023-12-19T15:56:30.380183924+01:00"}"
+>
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2023-12-19T15:56:30.380184065+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+srun: error: gpu11: tasks 2,6-8,14-15,17,20,23,25-26,30,32,35,37-38,40,44-45,49: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9202289.1
+slurmstepd: error: *** STEP 9202289.1 ON gpu11 CANCELLED AT 2023-12-19T15:56:31 ***
+slurmstepd: error: common_file_write_content: unable to open '/sys/fs/cgroup/freezer/slurm/uid_618619/job_9202289/step_1/freezer.state' for writing: Permission denied
+srun: error: gpu11: tasks 0,5,10,12,16,18-19,21,28,33,47-48: Terminated
+srun: error: gpu11: tasks 9,11,24: Exited with exit code 1
+srun: Force Terminated StepId=9202289.1

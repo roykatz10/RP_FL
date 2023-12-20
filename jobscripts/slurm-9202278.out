@@ -1,0 +1,10 @@
+INFO flwr 2023-12-19 14:23:57,454 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2023-12-19 14:23:57,513 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2023-12-19 14:23:57,513 | server.py:86 | Initializing global parameters
+INFO flwr 2023-12-19 14:23:57,513 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+slurmstepd: error: *** STEP 9202278.0 ON gpu11 CANCELLED AT 2023-12-19T14:24:49 ***
+slurmstepd: error: *** STEP 9202278.1 ON gpu11 CANCELLED AT 2023-12-19T14:24:49 ***
+slurmstepd: error: *** JOB 9202278 ON gpu11 CANCELLED AT 2023-12-19T14:24:49 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

@@ -1,0 +1,10 @@
+Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+Flower ECE: gRPC server running (400 rounds), SSL is disabled
+Initializing global parameters
+Requesting initial parameters from one random client
+Received initial parameters from one random client
+Evaluating initial parameters
+initial parameters (loss, other metrics): 2.3116652149677277, {'accuracy': 0.0839}
+FL starting
+fit_round 1: strategy sampled 50 clients (out of 50)
+fit_round 1 received 50 results and 0 failures

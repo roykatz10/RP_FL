@@ -2,7 +2,7 @@
 
 #SBATCH --partition=general
 #SBATCH --qos=short
-#SBATCH --time=0:30:00
+#SBATCH --time=1:30:00
 #SBATCH --ntasks=11
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
@@ -17,13 +17,16 @@ conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 
 nc=10
-nro=10
+nro=400
 str=0
-lr=0.1
+lr=0.0001
 rho=0.5
 dset="MNIST_10c"
+iid=False
+ed=False
 
-filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}.txt"
+
+filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid{$iid}_ed{$ed}.txt"
 line_tocheck='Flower ECE: gRPC server running'
 
 cd ..
@@ -55,15 +58,9 @@ do
 done
 
 
-srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset &
+srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset --iid $iid --ed $ed &
 
 
-
-#for ((i = 0; i<=$nc-1; i++))
-#do
-#    sleep 1
-#    srun --ntasks 1 --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} &
-#done
 
 wait $!
 

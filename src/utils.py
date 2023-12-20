@@ -17,13 +17,13 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 def get_train_data(dset, id, iid = True, ed = True, device = "cpu"):
     prefix = dir_path + "/../Data/"
     if iid:
-        suf1 = "iid_"
+        suf1 = "iid"
     else:
-        suf1 = "niid_"
+        suf1 = "niid"
     if ed:
-        suf2 = "ed"
+        suf2 = "_ed"
     else: 
-        suf2 = "ned"
+        suf2 = "_ned"
 
     if dset == "MNIST_10c":
         folder = "Data_MNIST/Data_10clients_"

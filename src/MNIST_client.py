@@ -48,7 +48,7 @@ class Net(nn.Module):
         state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
         self.load_state_dict(state_dict, strict=True)
 
-    def train(self, trainloader, epochs: int, opt, verbose=False):
+    def train(self, trainloader, opt, epochs=1, verbose=False):
         """Train the network on the training set."""
         criterion = torch.nn.CrossEntropyLoss()
         # optimizer = torch.optim.SGD(self.parameters(), lr=0.00002)
