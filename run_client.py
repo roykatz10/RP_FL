@@ -32,8 +32,8 @@ parser.add_argument("--str", type=int, default=0)
 args = parser.parse_args()
 
 
-id = args.cid
-# id = os.environ['SLURM_PROCID']
+#id = args.cid
+id = os.environ['SLURM_PROCID']
 
 
 X_train, y_train = get_train_data(args.dset, id, iid = args.iid, ed = args.ed, device=DEVICE)

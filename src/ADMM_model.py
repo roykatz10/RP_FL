@@ -89,7 +89,7 @@ class ADMM_Net(Net):
 
 class ADMM_FlowerClient(FlowerClient):
     def __init__(self, X_train, y_train, lr, rho):
-        super().__init__(X_train, y_train)
+        super().__init__(X_train, y_train, lr)
         self.net = ADMM_Net(lr, rho).to(device=DEVICE)
         self.lr = lr
 
