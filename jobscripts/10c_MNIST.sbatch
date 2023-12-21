@@ -18,11 +18,11 @@ conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 nc=10
 nro=400
-str=0
+str=5
 lr=0.0001
 rho=0.5
 dset="MNIST_10c"
-iid=False
+iid=True
 ed=False
 
 

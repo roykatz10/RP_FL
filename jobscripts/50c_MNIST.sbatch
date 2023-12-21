@@ -18,11 +18,11 @@ conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 nc=50
 nro=400
-str=0
+str=5
 lr=0.0001
 rho=0.5
 dset="MNIST_50c"
-iid=False
+iid=True
 ed=False
 
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed{$ed}.txt"
@@ -57,7 +57,7 @@ do
 done
 
 
-srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset --iid $iid --ed $ed &
+srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset --iid $iid --ed $ed --str $str &
 
 wait $!
 
