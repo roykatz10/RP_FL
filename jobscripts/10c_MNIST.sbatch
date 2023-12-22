@@ -18,12 +18,12 @@ conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 nc=10
 nro=400
-str=5
+str=2
 lr=0.0001
 rho=0.5
 dset="MNIST_10c"
-iid=True
-ed=False
+iid=False
+ed=True
 
 
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"

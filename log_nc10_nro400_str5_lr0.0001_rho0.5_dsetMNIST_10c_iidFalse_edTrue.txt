@@ -4,7 +4,7 @@ Initializing global parameters
 Requesting initial parameters from one random client
 Received initial parameters from one random client
 Evaluating initial parameters
-initial parameters (loss, other metrics): 2.301253264951706, {'accuracy': 0.0821}
+initial parameters (loss, other metrics): 2.30603107149601, {'accuracy': 0.0945}
 FL starting
-fit_round 1: strategy sampled 50 clients (out of 50)
-fit_round 1 received 50 results and 0 failures
+fit_round 1: strategy sampled 10 clients (out of 10)
+fit_round 1 received 10 results and 0 failures

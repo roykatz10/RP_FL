@@ -1,0 +1,54 @@
+INFO flwr 2023-12-21 14:34:08,656 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2023-12-21 14:34:08,735 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2023-12-21 14:34:08,735 | server.py:86 | Initializing global parameters
+INFO flwr 2023-12-21 14:34:08,735 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2023-12-21 14:35:08,327 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-21 14:35:08,327 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:08,331 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:08,331 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:08,331 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:08,331 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:08,334 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-21 14:35:08,334 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:09,230 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,234 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,234 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,237 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:09,419 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,422 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,423 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,426 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:09,431 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,436 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,436 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,439 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:09,450 | server.py:277 | Received initial parameters from one random client
+INFO flwr 2023-12-21 14:35:09,450 | server.py:88 | Evaluating initial parameters
+INFO flwr 2023-12-21 14:35:09,454 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2023-12-21 14:35:09,458 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,458 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,458 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,461 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,461 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,462 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-21 14:35:09,465 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:09,473 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,477 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,477 | connection.py:39 | ChannelConnectivity.CONNECTING
+INFO flwr 2023-12-21 14:35:09,478 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,480 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2023-12-21 14:35:09,482 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,483 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,486 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:09,511 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2023-12-21 14:35:09,514 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2023-12-21 14:35:09,515 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2023-12-21 14:35:09,518 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2023-12-21 14:35:12,026 | server.py:91 | initial parameters (loss, other metrics): 2.30558971619606, {'accuracy': 0.1135}
+INFO flwr 2023-12-21 14:35:12,026 | server.py:101 | FL starting
+slurmstepd: error: *** JOB 9205385 ON awi21 CANCELLED AT 2023-12-21T16:03:37 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9205385.0 ON awi21 CANCELLED AT 2023-12-21T16:03:37 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9205385.1 ON awi21 CANCELLED AT 2023-12-21T16:03:37 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
