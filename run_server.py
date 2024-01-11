@@ -8,7 +8,7 @@ import sys
 # sys.path.insert(1, os.path.join(sys.path[0], '..'))
 dir_path = os.path.dirname(os.path.realpath(__file__))
 from typing import Dict, List, Optional, Tuple
-from src.ADMM_model import ADMM_Net as Net
+from Roy.RP_FL.src.ADMM_client import ADMM_Net as Net
 from src.ADMM_strategy import ADMMStrategy
 import matplotlib.pyplot as plt
 from src.utils import get_test_data

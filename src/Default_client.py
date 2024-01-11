@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, random_split, TensorDataset
 
 from typing import Dict, List, Optional, Tuple
-
+from utils import get_arch
 import os
 import sys
 
@@ -21,17 +21,18 @@ DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
 
 
 class Net(nn.Module):
-    def __init__(self):
+    def __init__(self, dset="MNIST"):
         super(Net, self).__init__()
         self.flatten = nn.Flatten()
-        self.linear_relu_stack = nn.Sequential(
-            nn.Linear(784, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU(),
-            nn.Linear(64, 10)
-            ## Softmax layer ignored since the loss function defined is nn.CrossEntropy()
-        )
+        self.linear_relu_stack = get_arch(dset)
+        # self.linear_relu_stack = nn.Sequential(
+        #     nn.Linear(784, 128),
+        #     nn.ReLU(),
+        #     nn.Linear(128, 64),
+        #     nn.ReLU(),
+        #     nn.Linear(64, 10)
+        #     ## Softmax layer ignored since the loss function defined is nn.CrossEntropy()
+        # )
 
     def forward(self, x):
         x = self.flatten(x)

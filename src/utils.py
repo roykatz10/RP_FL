@@ -7,6 +7,7 @@ from torch.utils.data import TensorDataset
 from typing import Dict, List, Optional, Tuple
 import matplotlib.pyplot as plt
 
+import torch.nn as nn
 import os
 import sys
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
@@ -55,3 +56,28 @@ def get_test_data(dset, device = "cpu"):
     X_train = torch.load(f"{full_path}x_test.pt", map_location=device) 
     y_train = torch.load(f"{full_path}y_test.pt", map_location=device)
     return X_train, y_train
+
+
+def get_arch(dset):
+    if dset == "MNIST":
+        return nn.Sequential(
+            nn.Linear(784, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Linear(64, 10)
+            ## Softmax layer ignored since the loss function defined is nn.CrossEntropy()
+        )
+    elif dset == "kinase":
+        return nn.Sequential(
+            nn.Linear(8192, 256),
+            nn.ReLU(),
+            nn.Linear(256,128),
+            nn.ReLU(),
+            nn.Linear(128,10),
+            nn.Softmax(dim=10)
+        )
+    elif dset == "camelyon":
+        raise(NotImplementedError("not yet implemented camelyon architecture"))
+    else:
+        raise(ValueError("unknown dataset"))

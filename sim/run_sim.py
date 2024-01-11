@@ -18,14 +18,14 @@ import matplotlib.pyplot as plt
 # from run_server import evaluate
 # from fifty_clients import run_sim
 # from fifty_clients import multipleiid2
-from src.client import Net, FlowerClient
+from src.Default_client import Net, FlowerClient
 from src.utils import from_file
 from torch.utils.data import TensorDataset
 
 
 # from common.client import Net, FlowerClient
 # from common.utils import from_file, evaluate
-from src.ADMM_model import ADMM_FlowerClient
+from Roy.RP_FL.src.ADMM_client import ADMM_FlowerClient
 
 
 NUM_CLIENTS = 10

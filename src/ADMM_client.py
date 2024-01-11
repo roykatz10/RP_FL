@@ -20,7 +20,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-from src.MNIST_client import Net, FlowerClient
+from Roy.RP_FL.src.Default_client import Net, FlowerClient
 
 
 import flwr as fl
