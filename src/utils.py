@@ -33,7 +33,8 @@ def get_train_data(dset, id, iid = True, ed = True, device = "cpu"):
         folder = "Data_MNIST/Data_50clients_"
         full_path = prefix + folder + suf1
     elif dset == "kinase":
-        raise(NotImplementedError(f"{__name__}: still need to implement kinase non-sim"))
+        folder = "Data_kinase"
+        full_path = prefix + folder
     elif dset == "camelyon":
         raise(NotImplementedError(f"{__name__}: still need to implement camelyon dataset"))
     else:
@@ -48,7 +49,7 @@ def get_test_data(dset, device = "cpu"):
     if dset == "MNIST_10c" or dset == "MNIST_50c":
         full_path = prefix + "Data_MNIST/"
     elif dset == "kinase":
-        raise(NotImplementedError(f"{__name__}: still need to implement kinase"))
+        full_path = prefix + "Data_kinase/"
     elif dset == "camelyon":
         raise(NotImplementedError(f"{__name__}: still need to implement camelyon"))
     else:
