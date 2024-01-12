@@ -8,7 +8,7 @@ import sys
 # sys.path.insert(1, os.path.join(sys.path[0], '..'))
 dir_path = os.path.dirname(os.path.realpath(__file__))
 from typing import Dict, List, Optional, Tuple
-from Roy.RP_FL.src.ADMM_client import ADMM_Net as Net
+from src.ADMM_client import ADMM_Net as Net
 from src.ADMM_strategy import ADMMStrategy
 import matplotlib.pyplot as plt
 from src.utils import get_test_data
@@ -33,7 +33,7 @@ X_test, y_test = get_test_data(args.dset, device= DEVICE)
 # X_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/x_test.pt")
 # y_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/y_test.pt")
 testloader = TensorDataset(X_test, y_test)
-params  = Net(0.1, 0.5).get_parameters()
+params  = Net(0.1, 0.5, args.dset).get_parameters()
 
 
 # The `evaluate` function will be by Flower called after every round
@@ -43,7 +43,8 @@ def evaluate(
     config: Dict[str, fl.common.Scalar],
 ) -> Optional[Tuple[float, Dict[str, fl.common.Scalar]]]:\
 
-    net = Net(0.1, 0.5).to(DEVICE)
+    net = Net(0.1, 0.5, dset=args.dset).to(DEVICE)
+    net = net.double()
     net.set_parameters(parameters)  # Update model with the latest parameters
     loss, accuracy = net.test(testloader)
     server_accuracies[server_round - 1] = accuracy

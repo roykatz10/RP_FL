@@ -39,7 +39,7 @@ def get_train_data(dset, id, iid = True, ed = True, device = "cpu"):
         raise(NotImplementedError(f"{__name__}: still need to implement camelyon dataset"))
     else:
         raise(ValueError(f"{__name__}: unknown dataset: {dset}"))
-    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device) 
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
     y_train = torch.load(f"{full_path}/y_train_id{id}.pt", map_location=device)
     return X_train, y_train
 
@@ -54,13 +54,14 @@ def get_test_data(dset, device = "cpu"):
         raise(NotImplementedError(f"{__name__}: still need to implement camelyon"))
     else:
         raise(ValueError(f"{__name__}: unknown dataset: {dset}"))
-    X_train = torch.load(f"{full_path}x_test.pt", map_location=device) 
+    X_train = torch.load(f"{full_path}x_test.pt", map_location=device).double()
     y_train = torch.load(f"{full_path}y_test.pt", map_location=device)
+    # print(f'y_test shape: {y_train.shape}')
     return X_train, y_train
 
 
 def get_arch(dset):
-    if dset == "MNIST":
+    if (dset == "MNIST_10c") or (dset == "MNIST_50c"):
         return nn.Sequential(
             nn.Linear(784, 128),
             nn.ReLU(),
@@ -75,8 +76,8 @@ def get_arch(dset):
             nn.ReLU(),
             nn.Linear(256,128),
             nn.ReLU(),
-            nn.Linear(128,10),
-            nn.Softmax(dim=10)
+            nn.Linear(128,2),
+            nn.Softmax()
         )
     elif dset == "camelyon":
         raise(NotImplementedError("not yet implemented camelyon architecture"))

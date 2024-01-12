@@ -20,7 +20,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '..'))
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-from Roy.RP_FL.src.Default_client import Net, FlowerClient
+from src.Default_client import Net, FlowerClient
 
 
 import flwr as fl
@@ -40,8 +40,8 @@ DEVICE = torch.device(device)  # Try "  cuda" to train on GPU
 
 #print(len(trainloaders[0]))
 class ADMM_Net(Net):
-    def __init__(self, lr, rho):
-        super(ADMM_Net, self).__init__()
+    def __init__(self, lr, rho, dset):
+        super(ADMM_Net, self).__init__(dset=dset)
         # init y
         self.rho = rho
         self.y = OrderedDict()      
@@ -55,6 +55,7 @@ class ADMM_Net(Net):
             for images, labels in trainloader:
                 opt.zero_grad()
                 out = self.forward(images)
+                labels = labels.long()
                 loss = self.admm_loss(out, labels, z)
                 # lf = nn.CrossEntropyLoss()
                 # loss = lf(out, labels)
@@ -88,9 +89,10 @@ class ADMM_Net(Net):
 
 
 class ADMM_FlowerClient(FlowerClient):
-    def __init__(self, X_train, y_train, lr, rho):
-        super().__init__(X_train, y_train, lr)
-        self.net = ADMM_Net(lr, rho).to(device=DEVICE)
+    def __init__(self, X_train, y_train, lr, rho, dset):
+        super().__init__(X_train, y_train, lr, dset)
+        self.net = ADMM_Net(lr, rho, dset=dset).to(device=DEVICE)
+        self.net = self.net.double()
         self.lr = lr
 
     # this does not give y at the moment, could consider changing that

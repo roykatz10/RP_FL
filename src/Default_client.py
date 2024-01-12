@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, random_split, TensorDataset
 
 from typing import Dict, List, Optional, Tuple
-from utils import get_arch
+from src.utils import get_arch
 import os
 import sys
 
@@ -35,8 +35,12 @@ class Net(nn.Module):
         # )
 
     def forward(self, x):
-        x = self.flatten(x)
+        # print(f'dataset shape: {x.shape}')
+        if len(x.shape) > 1:
+            x = self.flatten(x)
         logits = self.linear_relu_stack(x)
+        if len(logits.shape) < 2:
+            logits = logits.view(1, -1)
         return logits
 
     def get_parameters(self) -> List[np.ndarray]:
@@ -63,6 +67,7 @@ class Net(nn.Module):
                 opt.zero_grad()
                 # print(images)
                 outputs = self.forward(images)
+                labels = labels.long()
                 # if(len(outputs) != labels.dim):
                 #     print('fuck:', len(outputs), labels.dim)
                 loss = criterion(outputs, labels)
@@ -85,7 +90,10 @@ class Net(nn.Module):
         with torch.no_grad():
             for images, labels in testloader:
                 images, labels = images.to(DEVICE), labels.to(DEVICE)
+                images = images.double()
+                labels = labels.long()
                 outputs = self.forward(images)
+                # labels = labels.view(1, -1)
                 loss += criterion(outputs, labels).item()
                 _, predicted = torch.max(outputs.data, 1)
                 total += labels.size(0)
@@ -96,8 +104,9 @@ class Net(nn.Module):
 
 
 class FlowerClient(fl.client.NumPyClient):
-    def __init__(self, X_train, y_train, lr):
-        self.net = Net()
+    def __init__(self, X_train, y_train, lr, dset):
+        self.net = Net(dset=dset)
+        self.net = self.net.double()
         self.lr = lr
         train_loader = TensorDataset(X_train, y_train)
         # test_loader = TensorDataset(X_test, y_test)

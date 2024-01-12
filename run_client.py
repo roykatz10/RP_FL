@@ -9,8 +9,8 @@ import sys
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from src.utils import get_train_data
-from src.ADMM_model import ADMM_FlowerClient
-from src.MNIST_client import FlowerClient
+from src.ADMM_client import ADMM_FlowerClient
+from src.Default_client import FlowerClient
 
 if torch.cuda.is_available():
     device = "cuda"
@@ -32,8 +32,8 @@ parser.add_argument("--str", type=int, default=0)
 args = parser.parse_args()
 
 
-#id = args.cid
-id = os.environ['SLURM_PROCID']
+id = args.cid
+# id = os.environ['SLURM_PROCID']
 
 
 X_train, y_train = get_train_data(args.dset, id, iid = args.iid, ed = args.ed, device=DEVICE)
@@ -41,8 +41,8 @@ X_train, y_train = get_train_data(args.dset, id, iid = args.iid, ed = args.ed, d
 # y_test = torch.load("Data/y_test.pt")
 
 if args.str == 5:
-    client = ADMM_FlowerClient(X_train, y_train, args.lr, args.rho)
+    client = ADMM_FlowerClient(X_train, y_train, args.lr, args.rho, args.dset)
 else:
-    client = FlowerClient(X_train, y_train, args.lr)
+    client = FlowerClient(X_train, y_train, args.lr, args.dset)
 print(f'booting up client {id}')
 fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
