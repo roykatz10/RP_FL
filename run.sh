@@ -5,6 +5,7 @@ str=5
 lr=0.1
 rho=0.5
 dset="MNIST_10c"
+central=False
 
 while true;
 do
@@ -15,6 +16,7 @@ do
         --lr) lr=$2; shift 2;;
         --rho) rho=$2; shift 2;;
         --dset) dset=$2; shift 2;;
+        --central) central=True; shift 1;;
         --) shift;  break   ;;
         *)  break ;;
     esac

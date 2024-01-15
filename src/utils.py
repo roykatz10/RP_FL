@@ -44,6 +44,20 @@ def get_train_data(dset, id, iid = True, ed = True, device = "cpu"):
     return X_train, y_train
 
 
+def get_central_train_data(dset, device='gpu'):
+    prefix = dir_path + "/../Data/"
+    if (dset=="MNIST_10c") or (dset == "MNIST_50c"):
+        full_path = prefix + "Data_MNIST/"
+    elif dset == "kinase":
+        pass
+    elif dset == "camelyon":
+        pass
+    else:
+        raise(ValueError(f'unkown dataset: {dset}'))
+    X_train = torch.load(f"{full_path}x_train_full.pt", map_location=device).double()
+    y_train = torch.load(f"{full_path}y_train_full.pt", map_location=device).double()
+    return X_train, y_train
+
 def get_test_data(dset, device = "cpu"):
     prefix = dir_path + "/../Data/"
     if dset == "MNIST_10c" or dset == "MNIST_50c":

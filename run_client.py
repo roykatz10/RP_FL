@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(1, os.path.join(sys.path[0], '..'))
 sys.path.insert(1, os.path.join(sys.path[0], '../..'))
-from src.utils import get_train_data
+from src.utils import get_train_data, get_central_train_data
 from src.ADMM_client import ADMM_FlowerClient
 from src.Default_client import FlowerClient
 
@@ -29,14 +29,17 @@ parser.add_argument("--dset", type=str, default="MNIST_10c")
 parser.add_argument("--iid", type=bool, default=True)
 parser.add_argument("--ed", type=bool, default=True)
 parser.add_argument("--str", type=int, default=0)
+parser.add_argument("--central", type=bool, default=False)
 args = parser.parse_args()
 
 
 #id = args.cid
 id = os.environ['SLURM_PROCID']
 
-
-X_train, y_train = get_train_data(args.dset, id, iid = args.iid, ed = args.ed, device=DEVICE)
+if args.central:
+    X_train, y_train = get_central_train_data(args.dset, device=DEVICE)
+else:
+    X_train, y_train = get_train_data(args.dset, id, central=args.central, iid = args.iid, ed = args.ed, device=DEVICE)
 # X_test = torch.load("Data/x_test.pt")
 # y_test = torch.load("Data/y_test.pt")
 

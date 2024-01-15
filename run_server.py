@@ -22,8 +22,14 @@ parser.add_argument("--nc", type=int, default=2)
 parser.add_argument("--rho", type=float, default=0.5)
 parser.add_argument("--fn", type=str, default="output.txt")
 parser.add_argument("--dset", type=str, default="MNIST_10c")
+parser.add_argument("--central", type=bool, default=False)
 args = parser.parse_args()
 
+
+if args.central:
+    NUM_CLIENTS = 1
+else:
+    NUM_CLIENTS = args.nc
 NUM_ROUNDS = args.nro
 DEVICE = torch.device("cpu")  # use cpu for all evaluation purposes
 
@@ -66,18 +72,18 @@ def evaluate(
 strategy_avg = fl.server.strategy.FedAvg(
     fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=args.nc,  # Never sample less than 10 clients for training
+    min_fit_clients=NUM_CLIENTS,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=args.nc,  # Wait until all 10 clients are available
+    min_available_clients=NUM_CLIENTS,  # Wait until all 10 clients are available
     evaluate_fn=evaluate,
 )
 
 strategy_prox = fl.server.strategy.FedProx(
     fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=args.nc,  # Never sample less than 10 clients for training
+    min_fit_clients=NUM_CLIENTS,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=args.nc,  # Wait until all 10 clients are available
+    min_available_clients=NUM_CLIENTS,  # Wait until all 10 clients are available
     proximal_mu = 0.0005,
     evaluate_fn = evaluate,
 )
@@ -85,18 +91,18 @@ strategy_prox = fl.server.strategy.FedProx(
 strategy_median = fl.server.strategy.FedMedian(
     fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=args.nc,  # Never sample less than 10 clients for training
+    min_fit_clients=NUM_CLIENTS,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=args.nc,  # Wait until all 10 clients are available
+    min_available_clients=NUM_CLIENTS,  # Wait until all 10 clients are available
     evaluate_fn = evaluate,
 )
 
 strategy_yogi = fl.server.strategy.FedYogi(
     fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=args.nc,  # Never sample less than 10 clients for training
+    min_fit_clients=NUM_CLIENTS,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=args.nc,  # Wait until all 10 clients are available
+    min_available_clients=NUM_CLIENTS,  # Wait until all 10 clients are available
     initial_parameters=fl.common.ndarrays_to_parameters(params),
     evaluate_fn = evaluate,
 )
@@ -104,9 +110,9 @@ strategy_yogi = fl.server.strategy.FedYogi(
 strategy_qFedAvg = fl.server.strategy.QFedAvg(
     fraction_fit=1.0,  # Sample 100% of available clients for training
     fraction_evaluate=0.0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=args.nc,  # Never sample less than 10 clients for training
+    min_fit_clients=NUM_CLIENTS,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=args.nc,  # Wait until all 10 clients are available
+    min_available_clients=NUM_CLIENTS,  # Wait until all 10 clients are available
     evaluate_fn = evaluate,
 )
 
@@ -114,9 +120,9 @@ strategy_ADMM = ADMMStrategy(
     rho = args.rho,
     fraction_fit=1,  # Sample 100% of available clients for training
     fraction_evaluate=0,  # Sample 50% of available clients for evaluation
-    min_fit_clients=args.nc,  # Never sample less than 10 clients for training
+    min_fit_clients=NUM_CLIENTS,  # Never sample less than 10 clients for training
     min_evaluate_clients=0,  # Never sample less than 5 clients for evaluation
-    min_available_clients=args.nc,  # Wait until all clients are available
+    min_available_clients=NUM_CLIENTS,  # Wait until all clients are available
     evaluate_fn = evaluate,
 )
 
@@ -141,7 +147,7 @@ elif args.strat == 5:
     print('server strategy: ADMM')
     strat = strategy_ADMM
 
-print(f'number of clients: {args.nc}')
+print(f'number of clients: {NUM_CLIENTS}')
 if __name__ == "__main__":
 
     #stdout_orig = sys.stdout
@@ -152,4 +158,4 @@ if __name__ == "__main__":
     fl.server.start_server(config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS), strategy=strat)
     #sys.stdout.close()
     #sys.stdout = stdout_orig
-    print(f'took {time.time() - now} seconds for {args.nc} clients and {args.nro} rounds')
+    print(f'took {time.time() - now} seconds for {NUM_CLIENTS} clients and {args.nro} rounds')
