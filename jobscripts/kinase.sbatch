@@ -1,14 +1,13 @@
 #!/bin/sh
 
-#SBATCH --partition=general
+#BATCH --partition=general
 #SBATCH --qos=short
 #SBATCH --time=4:00:00
-#SBATCH --ntasks=51
+#SBATCH --ntasks=4
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-type=END
 #SBATCH --mem-per-cpu=2G
-
 
 module use /opt/insy/modulefiles
 module load cuda/11.5 cudnn/11.5-8.3.0.98
@@ -16,16 +15,18 @@ module load miniconda/3.9
 conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 
-nc=50
+
+nc=3
 nro=400
-str=3
+str=5
 lr=0.0001
 rho=0.5
-dset="MNIST_50c"
-iid=False
-ed=True
+dset="kinase"
+iid=True
+ed=False
 
-filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed{$ed}.txt"
+
+filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"
 line_tocheck='Flower ECE: gRPC server running'
 
 cd ..
@@ -48,7 +49,7 @@ do
     while IFS= read -r line
     do
       if [[ $line == *$line_tocheck* ]]; then
-        echo "server booted up. starting clients..."
+echo "server booted up. starting clients..."
         finished=1
         break
       fi
@@ -57,11 +58,11 @@ do
 done
 
 
-srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset --iid $iid --ed $ed --str $str &
+srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset  --str $str &
+
+
 
 wait $!
 
 rm "$filename"
-
-
 

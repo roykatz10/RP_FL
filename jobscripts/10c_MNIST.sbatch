@@ -2,7 +2,7 @@
 
 #SBATCH --partition=general
 #SBATCH --qos=short
-#SBATCH --time=1:30:00
+#SBATCH --time=4:00:00
 #SBATCH --ntasks=11
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
@@ -18,12 +18,12 @@ conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 nc=10
 nro=400
-str=2
+str=5
 lr=0.0001
 rho=0.5
 dset="MNIST_10c"
-iid=False
-ed=True
+iid=True
+ed=False
 
 
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"
