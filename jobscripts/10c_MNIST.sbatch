@@ -22,8 +22,8 @@ str=5
 lr=0.0001
 rho=0.5
 dset="MNIST_10c"
-iid=True
-ed=False
+iid=1
+ed=1
 
 
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"

@@ -26,14 +26,16 @@ parser.add_argument("--cid", type=int, default=0)
 parser.add_argument("--lr", type=float, default=0.1)
 parser.add_argument("--rho", type=float, default=0.5)
 parser.add_argument("--dset", type=str, default="MNIST_10c")
-parser.add_argument("--iid", type=bool, default=True)
-parser.add_argument("--ed", type=bool, default=True)
+parser.add_argument("--iid", type=int, default=1)
+parser.add_argument("--ed", type=int, default=1)
 parser.add_argument("--str", type=int, default=0)
 parser.add_argument("--central", type=int, default=0)
 args = parser.parse_args()
 
 
 args.central = bool(args.central)
+args.iid = bool(args.iid)
+args.ed = bool(args.ed)
 
 id = args.cid
 #id = os.environ['SLURM_PROCID']

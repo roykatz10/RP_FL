@@ -37,7 +37,7 @@ if test -f "$filename"; then
 fi
 
 
-python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename --central True &
+python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename --central 1&
 
 # whole bunch of stuff to make sure we're waiting for the server over here
 finished=0
@@ -58,7 +58,7 @@ do
 done
 
 
-python run_client.py --lr $lr --rho $rho --dset $dset --str $str --central True &
+python run_client.py --lr $lr --rho $rho --dset $dset --str $str --central 1 &
 
 
 

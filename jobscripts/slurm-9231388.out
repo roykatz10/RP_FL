@@ -1,0 +1,155 @@
+INFO flwr 2024-01-17 15:23:54,485 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-01-17 15:23:54,538 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-01-17 15:23:54,538 | server.py:86 | Initializing global parameters
+INFO flwr 2024-01-17 15:23:54,538 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2024-01-17 15:24:51,078 | server.py:277 | Received initial parameters from one random client
+INFO flwr 2024-01-17 15:24:51,078 | server.py:88 | Evaluating initial parameters
+INFO flwr 2024-01-17 15:24:52,092 | server.py:91 | initial parameters (loss, other metrics): 2.304742197128132, {'accuracy': 0.0882}
+INFO flwr 2024-01-17 15:24:52,092 | server.py:101 | FL starting
+INFO flwr 2024-01-17 15:24:52,986 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:52,988 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:52,988 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:52,991 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,176 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,178 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,178 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,181 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,250 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,252 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,252 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,256 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,265 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,267 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,267 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,270 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,280 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,281 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,281 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,284 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,294 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,295 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,296 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,299 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,442 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,444 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,444 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,447 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,450 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,452 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,452 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,455 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,459 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,460 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,461 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,464 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-17 15:24:53,484 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-17 15:24:53,485 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-17 15:24:53,485 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-17 15:24:53,488 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-17 15:25:29,086 | server.py:218 | fit_round 1: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:25:41,692 | server.py:232 | fit_round 1 received 10 results and 0 failures
+WARNING flwr 2024-01-17 15:25:41,701 | fedavg.py:243 | No fit_metrics_aggregation_fn provided
+INFO flwr 2024-01-17 15:25:42,683 | server.py:119 | fit progress: (1, 2.291080382961727, {'accuracy': 0.1427}, 50.591026708018035)
+INFO flwr 2024-01-17 15:25:42,683 | server.py:166 | evaluate_round 1: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:25:42,684 | server.py:218 | fit_round 2: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:25:54,945 | server.py:232 | fit_round 2 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:25:55,925 | server.py:119 | fit progress: (2, 2.2746807507071387, {'accuracy': 0.2318}, 63.832324548624456)
+INFO flwr 2024-01-17 15:25:55,925 | server.py:166 | evaluate_round 2: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:25:55,925 | server.py:218 | fit_round 3: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:26:08,732 | server.py:232 | fit_round 3 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:26:09,709 | server.py:119 | fit progress: (3, 2.252645845650344, {'accuracy': 0.368}, 77.6170066469349)
+INFO flwr 2024-01-17 15:26:09,709 | server.py:166 | evaluate_round 3: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:26:09,710 | server.py:218 | fit_round 4: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:26:22,355 | server.py:232 | fit_round 4 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:26:23,340 | server.py:119 | fit progress: (4, 2.22175937444564, {'accuracy': 0.4254}, 91.24779267096892)
+INFO flwr 2024-01-17 15:26:23,340 | server.py:166 | evaluate_round 4: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:26:23,341 | server.py:218 | fit_round 5: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:26:35,777 | server.py:232 | fit_round 5 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:26:36,757 | server.py:119 | fit progress: (5, 2.1781390268396246, {'accuracy': 0.479}, 104.6644709049724)
+INFO flwr 2024-01-17 15:26:36,757 | server.py:166 | evaluate_round 5: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:26:36,757 | server.py:218 | fit_round 6: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:26:48,863 | server.py:232 | fit_round 6 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:26:49,845 | server.py:119 | fit progress: (6, 2.1173607394644467, {'accuracy': 0.5444}, 117.75229580095038)
+INFO flwr 2024-01-17 15:26:49,845 | server.py:166 | evaluate_round 6: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:26:49,845 | server.py:218 | fit_round 7: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:27:01,617 | server.py:232 | fit_round 7 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:27:02,593 | server.py:119 | fit progress: (7, 2.0350313345946045, {'accuracy': 0.5845}, 130.5003439807333)
+INFO flwr 2024-01-17 15:27:02,593 | server.py:166 | evaluate_round 7: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:27:02,593 | server.py:218 | fit_round 8: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:27:14,006 | server.py:232 | fit_round 8 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:27:14,977 | server.py:119 | fit progress: (8, 1.9283074541099865, {'accuracy': 0.6102}, 142.88466599071398)
+INFO flwr 2024-01-17 15:27:14,977 | server.py:166 | evaluate_round 8: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:27:14,977 | server.py:218 | fit_round 9: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:27:26,211 | server.py:232 | fit_round 9 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:27:27,248 | server.py:119 | fit progress: (9, 1.7970131094617474, {'accuracy': 0.6411}, 155.15534983202815)
+INFO flwr 2024-01-17 15:27:27,248 | server.py:166 | evaluate_round 9: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:27:27,248 | server.py:218 | fit_round 10: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:27:38,409 | server.py:232 | fit_round 10 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:27:39,380 | server.py:119 | fit progress: (10, 1.6435850968028263, {'accuracy': 0.6733}, 167.2873153067194)
+INFO flwr 2024-01-17 15:27:39,380 | server.py:166 | evaluate_round 10: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:27:39,380 | server.py:218 | fit_round 11: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:27:50,366 | server.py:232 | fit_round 11 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:27:51,409 | server.py:119 | fit progress: (11, 1.4765656538320098, {'accuracy': 0.7039}, 179.3166131558828)
+INFO flwr 2024-01-17 15:27:51,410 | server.py:166 | evaluate_round 11: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:27:51,410 | server.py:218 | fit_round 12: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:28:02,339 | server.py:232 | fit_round 12 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:28:03,324 | server.py:119 | fit progress: (12, 1.3111302481042113, {'accuracy': 0.7332}, 191.23181174788624)
+INFO flwr 2024-01-17 15:28:03,324 | server.py:166 | evaluate_round 12: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:28:03,324 | server.py:218 | fit_round 13: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:28:14,516 | server.py:232 | fit_round 13 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:28:15,532 | server.py:119 | fit progress: (13, 1.161460297589732, {'accuracy': 0.7584}, 203.44009434385225)
+INFO flwr 2024-01-17 15:28:15,533 | server.py:166 | evaluate_round 13: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:28:15,533 | server.py:218 | fit_round 14: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:28:26,693 | server.py:232 | fit_round 14 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:28:27,682 | server.py:119 | fit progress: (14, 1.0352286938359838, {'accuracy': 0.7759}, 215.58993113273755)
+INFO flwr 2024-01-17 15:28:27,682 | server.py:166 | evaluate_round 14: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:28:27,682 | server.py:218 | fit_round 15: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:28:39,309 | server.py:232 | fit_round 15 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:28:40,300 | server.py:119 | fit progress: (15, 0.9329573360776305, {'accuracy': 0.7892}, 228.2080159978941)
+INFO flwr 2024-01-17 15:28:40,300 | server.py:166 | evaluate_round 15: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:28:40,301 | server.py:218 | fit_round 16: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:28:52,377 | server.py:232 | fit_round 16 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:28:53,365 | server.py:119 | fit progress: (16, 0.851156297256128, {'accuracy': 0.7999}, 241.27263926668093)
+INFO flwr 2024-01-17 15:28:53,365 | server.py:166 | evaluate_round 16: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:28:53,365 | server.py:218 | fit_round 17: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:29:05,672 | server.py:232 | fit_round 17 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:29:06,652 | server.py:119 | fit progress: (17, 0.7852238614094845, {'accuracy': 0.8095}, 254.55983743676916)
+INFO flwr 2024-01-17 15:29:06,652 | server.py:166 | evaluate_round 17: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:29:06,652 | server.py:218 | fit_round 18: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:29:19,204 | server.py:232 | fit_round 18 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:29:20,186 | server.py:119 | fit progress: (18, 0.7312925164479962, {'accuracy': 0.8183}, 268.0940538230352)
+INFO flwr 2024-01-17 15:29:20,186 | server.py:166 | evaluate_round 18: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:29:20,187 | server.py:218 | fit_round 19: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:29:32,494 | server.py:232 | fit_round 19 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:29:33,470 | server.py:119 | fit progress: (19, 0.6864343425100429, {'accuracy': 0.8262}, 281.37778086587787)
+INFO flwr 2024-01-17 15:29:33,470 | server.py:166 | evaluate_round 19: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:29:33,470 | server.py:218 | fit_round 20: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:29:45,341 | server.py:232 | fit_round 20 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:29:46,312 | server.py:119 | fit progress: (20, 0.6486596033281474, {'accuracy': 0.8338}, 294.21978499367833)
+INFO flwr 2024-01-17 15:29:46,312 | server.py:166 | evaluate_round 20: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:29:46,312 | server.py:218 | fit_round 21: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:29:57,636 | server.py:232 | fit_round 21 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:29:58,604 | server.py:119 | fit progress: (21, 0.6165021611947732, {'accuracy': 0.8396}, 306.51156001584604)
+INFO flwr 2024-01-17 15:29:58,604 | server.py:166 | evaluate_round 21: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:29:58,604 | server.py:218 | fit_round 22: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:30:09,740 | server.py:232 | fit_round 22 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:30:10,712 | server.py:119 | fit progress: (22, 0.5888199840769192, {'accuracy': 0.8461}, 318.6199060087092)
+INFO flwr 2024-01-17 15:30:10,712 | server.py:166 | evaluate_round 22: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:30:10,713 | server.py:218 | fit_round 23: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:30:21,954 | server.py:232 | fit_round 23 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:30:22,926 | server.py:119 | fit progress: (23, 0.5647907636082135, {'accuracy': 0.8501}, 330.8339660577476)
+INFO flwr 2024-01-17 15:30:22,926 | server.py:166 | evaluate_round 23: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:30:22,927 | server.py:218 | fit_round 24: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:30:34,050 | server.py:232 | fit_round 24 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:30:35,085 | server.py:119 | fit progress: (24, 0.5437739193158871, {'accuracy': 0.8554}, 342.9924023337662)
+INFO flwr 2024-01-17 15:30:35,088 | server.py:166 | evaluate_round 24: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:30:35,088 | server.py:218 | fit_round 25: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:30:46,025 | server.py:232 | fit_round 25 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:30:46,997 | server.py:119 | fit progress: (25, 0.5252954769119005, {'accuracy': 0.8604}, 354.9047243478708)
+INFO flwr 2024-01-17 15:30:46,997 | server.py:166 | evaluate_round 25: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:30:46,997 | server.py:218 | fit_round 26: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-17 15:30:57,931 | server.py:232 | fit_round 26 received 10 results and 0 failures
+INFO flwr 2024-01-17 15:30:58,920 | server.py:119 | fit progress: (26, 0.5089682317429333, {'accuracy': 0.8631}, 366.82817204203457)
+INFO flwr 2024-01-17 15:30:58,921 | server.py:166 | evaluate_round 26: no clients selected, cancel
+DEBUG flwr 2024-01-17 15:30:58,921 | server.py:218 | fit_round 27: strategy sampled 10 clients (out of 10)

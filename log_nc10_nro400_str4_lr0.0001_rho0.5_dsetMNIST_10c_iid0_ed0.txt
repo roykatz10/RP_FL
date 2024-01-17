@@ -1,0 +1,653 @@
+Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+Flower ECE: gRPC server running (400 rounds), SSL is disabled
+Initializing global parameters
+Using initial parameters provided by strategy
+Evaluating initial parameters
+initial parameters (loss, other metrics): 2.3073316076647195, {'accuracy': 0.1125}
+FL starting
+fit_round 1: strategy sampled 10 clients (out of 10)
+fit_round 1 received 10 results and 0 failures
+No fit_metrics_aggregation_fn provided
+fit progress: (1, 2.300241843368949, {'accuracy': 0.1273}, 87.35148565005511)
+evaluate_round 1: no clients selected, cancel
+fit_round 2: strategy sampled 10 clients (out of 10)
+fit_round 2 received 10 results and 0 failures
+fit progress: (2, 2.2892282217481124, {'accuracy': 0.1818}, 89.41522658802569)
+evaluate_round 2: no clients selected, cancel
+fit_round 3: strategy sampled 10 clients (out of 10)
+fit_round 3 received 10 results and 0 failures
+fit progress: (3, 2.2774066098856514, {'accuracy': 0.2034}, 92.16205609496683)
+evaluate_round 3: no clients selected, cancel
+fit_round 4: strategy sampled 10 clients (out of 10)
+fit_round 4 received 10 results and 0 failures
+fit progress: (4, 2.283995061296481, {'accuracy': 0.2065}, 94.491762497928)
+evaluate_round 4: no clients selected, cancel
+fit_round 5: strategy sampled 10 clients (out of 10)
+fit_round 5 received 10 results and 0 failures
+fit progress: (5, 2.442518612852135, {'accuracy': 0.2098}, 97.03313260804862)
+evaluate_round 5: no clients selected, cancel
+fit_round 6: strategy sampled 10 clients (out of 10)
+fit_round 6 received 10 results and 0 failures
+fit progress: (6, 3.0605333988065113, {'accuracy': 0.2108}, 99.05876980163157)
+evaluate_round 6: no clients selected, cancel
+fit_round 7: strategy sampled 10 clients (out of 10)
+fit_round 7 received 10 results and 0 failures
+fit progress: (7, 4.048496475980081, {'accuracy': 0.211}, 101.78168539190665)
+evaluate_round 7: no clients selected, cancel
+fit_round 8: strategy sampled 10 clients (out of 10)
+fit_round 8 received 10 results and 0 failures
+fit progress: (8, 4.832000269432989, {'accuracy': 0.211}, 103.79093122901395)
+evaluate_round 8: no clients selected, cancel
+fit_round 9: strategy sampled 10 clients (out of 10)
+fit_round 9 received 10 results and 0 failures
+fit progress: (9, 5.039678862784365, {'accuracy': 0.211}, 106.44872313085943)
+evaluate_round 9: no clients selected, cancel
+fit_round 10: strategy sampled 10 clients (out of 10)
+fit_round 10 received 10 results and 0 failures
+fit progress: (10, 4.63199574386427, {'accuracy': 0.211}, 109.07310796761885)
+evaluate_round 10: no clients selected, cancel
+fit_round 11: strategy sampled 10 clients (out of 10)
+fit_round 11 received 10 results and 0 failures
+fit progress: (11, 3.782408336181771, {'accuracy': 0.2111}, 111.56879625003785)
+evaluate_round 11: no clients selected, cancel
+fit_round 12: strategy sampled 10 clients (out of 10)
+fit_round 12 received 10 results and 0 failures
+fit progress: (12, 2.7986819118976802, {'accuracy': 0.211}, 113.58659781189635)
+evaluate_round 12: no clients selected, cancel
+fit_round 13: strategy sampled 10 clients (out of 10)
+fit_round 13 received 10 results and 0 failures
+fit progress: (13, 2.070703393608524, {'accuracy': 0.261}, 116.27922768564895)
+evaluate_round 13: no clients selected, cancel
+fit_round 14: strategy sampled 10 clients (out of 10)
+fit_round 14 received 10 results and 0 failures
+fit progress: (14, 1.735743423018537, {'accuracy': 0.4102}, 118.2985281618312)
+evaluate_round 14: no clients selected, cancel
+fit_round 15: strategy sampled 10 clients (out of 10)
+fit_round 15 received 10 results and 0 failures
+fit progress: (15, 1.6593413550788616, {'accuracy': 0.4017}, 120.93866622680798)
+evaluate_round 15: no clients selected, cancel
+fit_round 16: strategy sampled 10 clients (out of 10)
+fit_round 16 received 10 results and 0 failures
+fit progress: (16, 1.6401295586380318, {'accuracy': 0.4648}, 123.40371971903369)
+evaluate_round 16: no clients selected, cancel
+fit_round 17: strategy sampled 10 clients (out of 10)
+fit_round 17 received 10 results and 0 failures
+fit progress: (17, 1.6031269239858748, {'accuracy': 0.4409}, 126.02568757673725)
+evaluate_round 17: no clients selected, cancel
+fit_round 18: strategy sampled 10 clients (out of 10)
+fit_round 18 received 10 results and 0 failures
+fit progress: (18, 1.568198711300316, {'accuracy': 0.4217}, 128.20080972695723)
+evaluate_round 18: no clients selected, cancel
+fit_round 19: strategy sampled 10 clients (out of 10)
+fit_round 19 received 10 results and 0 failures
+fit progress: (19, 1.5779997403071258, {'accuracy': 0.4173}, 130.87444715062156)
+evaluate_round 19: no clients selected, cancel
+fit_round 20: strategy sampled 10 clients (out of 10)
+fit_round 20 received 10 results and 0 failures
+fit progress: (20, 1.6522200690852307, {'accuracy': 0.4515}, 132.8823484936729)
+evaluate_round 20: no clients selected, cancel
+fit_round 21: strategy sampled 10 clients (out of 10)
+fit_round 21 received 10 results and 0 failures
+fit progress: (21, 1.764740314975613, {'accuracy': 0.4727}, 135.56467714672908)
+evaluate_round 21: no clients selected, cancel
+fit_round 22: strategy sampled 10 clients (out of 10)
+fit_round 22 received 10 results and 0 failures
+fit progress: (22, 1.8579237692203456, {'accuracy': 0.4549}, 137.9398044818081)
+evaluate_round 22: no clients selected, cancel
+fit_round 23: strategy sampled 10 clients (out of 10)
+fit_round 23 received 10 results and 0 failures
+fit progress: (23, 1.876760260017247, {'accuracy': 0.4433}, 140.5298444009386)
+evaluate_round 23: no clients selected, cancel
+fit_round 24: strategy sampled 10 clients (out of 10)
+fit_round 24 received 10 results and 0 failures
+fit progress: (24, 1.7938272973009226, {'accuracy': 0.4637}, 142.87565598078072)
+evaluate_round 24: no clients selected, cancel
+fit_round 25: strategy sampled 10 clients (out of 10)
+fit_round 25 received 10 results and 0 failures
+fit progress: (25, 1.6180453073466345, {'accuracy': 0.508}, 145.45715297106653)
+evaluate_round 25: no clients selected, cancel
+fit_round 26: strategy sampled 10 clients (out of 10)
+fit_round 26 received 10 results and 0 failures
+fit progress: (26, 1.3910745167862828, {'accuracy': 0.5671}, 147.4736346337013)
+evaluate_round 26: no clients selected, cancel
+fit_round 27: strategy sampled 10 clients (out of 10)
+fit_round 27 received 10 results and 0 failures
+fit progress: (27, 1.1696866540088882, {'accuracy': 0.6233}, 150.24915698869154)
+evaluate_round 27: no clients selected, cancel
+fit_round 28: strategy sampled 10 clients (out of 10)
+fit_round 28 received 10 results and 0 failures
+fit progress: (28, 0.9984590335798205, {'accuracy': 0.6733}, 152.65003062598407)
+evaluate_round 28: no clients selected, cancel
+fit_round 29: strategy sampled 10 clients (out of 10)
+fit_round 29 received 10 results and 0 failures
+fit progress: (29, 0.8873830780417237, {'accuracy': 0.7192}, 155.15074949385598)
+evaluate_round 29: no clients selected, cancel
+fit_round 30: strategy sampled 10 clients (out of 10)
+fit_round 30 received 10 results and 0 failures
+fit progress: (30, 0.8209477601703895, {'accuracy': 0.7597}, 157.57144262362272)
+evaluate_round 30: no clients selected, cancel
+fit_round 31: strategy sampled 10 clients (out of 10)
+fit_round 31 received 10 results and 0 failures
+fit progress: (31, 0.7833499007008373, {'accuracy': 0.7672}, 160.0554093378596)
+evaluate_round 31: no clients selected, cancel
+fit_round 32: strategy sampled 10 clients (out of 10)
+fit_round 32 received 10 results and 0 failures
+fit progress: (32, 0.7682163395759926, {'accuracy': 0.7555}, 162.06388813396916)
+evaluate_round 32: no clients selected, cancel
+fit_round 33: strategy sampled 10 clients (out of 10)
+fit_round 33 received 10 results and 0 failures
+fit progress: (33, 0.7724995518836009, {'accuracy': 0.7447}, 164.77700769668445)
+evaluate_round 33: no clients selected, cancel
+fit_round 34: strategy sampled 10 clients (out of 10)
+fit_round 34 received 10 results and 0 failures
+fit progress: (34, 0.7913023195016311, {'accuracy': 0.7359}, 167.09137296164408)
+evaluate_round 34: no clients selected, cancel
+fit_round 35: strategy sampled 10 clients (out of 10)
+fit_round 35 received 10 results and 0 failures
+fit progress: (35, 0.8166391574601741, {'accuracy': 0.7294}, 169.63832637900487)
+evaluate_round 35: no clients selected, cancel
+fit_round 36: strategy sampled 10 clients (out of 10)
+fit_round 36 received 10 results and 0 failures
+fit progress: (36, 0.8379611349174709, {'accuracy': 0.7325}, 172.25148250395432)
+evaluate_round 36: no clients selected, cancel
+fit_round 37: strategy sampled 10 clients (out of 10)
+fit_round 37 received 10 results and 0 failures
+fit progress: (37, 0.8444470101709427, {'accuracy': 0.7378}, 174.6299241776578)
+evaluate_round 37: no clients selected, cancel
+fit_round 38: strategy sampled 10 clients (out of 10)
+fit_round 38 received 10 results and 0 failures
+fit progress: (38, 0.8293036792648689, {'accuracy': 0.7456}, 176.64489582180977)
+evaluate_round 38: no clients selected, cancel
+fit_round 39: strategy sampled 10 clients (out of 10)
+fit_round 39 received 10 results and 0 failures
+fit progress: (39, 0.7935812096353725, {'accuracy': 0.7569}, 179.35107894102111)
+evaluate_round 39: no clients selected, cancel
+fit_round 40: strategy sampled 10 clients (out of 10)
+fit_round 40 received 10 results and 0 failures
+fit progress: (40, 0.7451657702187928, {'accuracy': 0.7692}, 181.73134858487174)
+evaluate_round 40: no clients selected, cancel
+fit_round 41: strategy sampled 10 clients (out of 10)
+fit_round 41 received 10 results and 0 failures
+fit progress: (41, 0.6937149304069681, {'accuracy': 0.7784}, 184.2215485270135)
+evaluate_round 41: no clients selected, cancel
+fit_round 42: strategy sampled 10 clients (out of 10)
+fit_round 42 received 10 results and 0 failures
+fit progress: (42, 0.6456943760521009, {'accuracy': 0.7936}, 186.80919355293736)
+evaluate_round 42: no clients selected, cancel
+fit_round 43: strategy sampled 10 clients (out of 10)
+fit_round 43 received 10 results and 0 failures
+fit progress: (43, 0.6037456592518244, {'accuracy': 0.8073}, 189.17462256504223)
+evaluate_round 43: no clients selected, cancel
+fit_round 44: strategy sampled 10 clients (out of 10)
+fit_round 44 received 10 results and 0 failures
+fit progress: (44, 0.5699651319886261, {'accuracy': 0.8174}, 191.21235512569547)
+evaluate_round 44: no clients selected, cancel
+fit_round 45: strategy sampled 10 clients (out of 10)
+fit_round 45 received 10 results and 0 failures
+fit progress: (45, 0.5475611584042269, {'accuracy': 0.826}, 193.83814448164776)
+evaluate_round 45: no clients selected, cancel
+fit_round 46: strategy sampled 10 clients (out of 10)
+fit_round 46 received 10 results and 0 failures
+fit progress: (46, 0.5388138362058509, {'accuracy': 0.8312}, 196.443821570836)
+evaluate_round 46: no clients selected, cancel
+fit_round 47: strategy sampled 10 clients (out of 10)
+fit_round 47 received 10 results and 0 failures
+fit progress: (47, 0.5425803659670796, {'accuracy': 0.832}, 198.83718815585598)
+evaluate_round 47: no clients selected, cancel
+fit_round 48: strategy sampled 10 clients (out of 10)
+fit_round 48 received 10 results and 0 failures
+fit progress: (48, 0.5540231530582637, {'accuracy': 0.8279}, 201.48731247289106)
+evaluate_round 48: no clients selected, cancel
+fit_round 49: strategy sampled 10 clients (out of 10)
+fit_round 49 received 10 results and 0 failures
+fit progress: (49, 0.5671534590755276, {'accuracy': 0.8263}, 203.82973010698333)
+evaluate_round 49: no clients selected, cancel
+fit_round 50: strategy sampled 10 clients (out of 10)
+fit_round 50 received 10 results and 0 failures
+fit progress: (50, 0.5773479798944393, {'accuracy': 0.8239}, 205.88570202002302)
+evaluate_round 50: no clients selected, cancel
+fit_round 51: strategy sampled 10 clients (out of 10)
+fit_round 51 received 10 results and 0 failures
+fit progress: (51, 0.5821638425992953, {'accuracy': 0.8235}, 208.50651435460895)
+evaluate_round 51: no clients selected, cancel
+fit_round 52: strategy sampled 10 clients (out of 10)
+fit_round 52 received 10 results and 0 failures
+fit progress: (52, 0.5809468720715356, {'accuracy': 0.8268}, 211.18583200173452)
+evaluate_round 52: no clients selected, cancel
+fit_round 53: strategy sampled 10 clients (out of 10)
+fit_round 53 received 10 results and 0 failures
+fit progress: (53, 0.574030450295865, {'accuracy': 0.8285}, 213.48582809977233)
+evaluate_round 53: no clients selected, cancel
+fit_round 54: strategy sampled 10 clients (out of 10)
+fit_round 54 received 10 results and 0 failures
+fit progress: (54, 0.5622130820785654, {'accuracy': 0.8309}, 216.15537763386965)
+evaluate_round 54: no clients selected, cancel
+fit_round 55: strategy sampled 10 clients (out of 10)
+fit_round 55 received 10 results and 0 failures
+fit progress: (55, 0.5466721065951591, {'accuracy': 0.8345}, 218.44019937189296)
+evaluate_round 55: no clients selected, cancel
+fit_round 56: strategy sampled 10 clients (out of 10)
+fit_round 56 received 10 results and 0 failures
+fit progress: (56, 0.5290304363245479, {'accuracy': 0.8396}, 220.5880112699233)
+evaluate_round 56: no clients selected, cancel
+fit_round 57: strategy sampled 10 clients (out of 10)
+fit_round 57 received 10 results and 0 failures
+fit progress: (57, 0.5114275395490181, {'accuracy': 0.843}, 223.10136959562078)
+evaluate_round 57: no clients selected, cancel
+fit_round 58: strategy sampled 10 clients (out of 10)
+fit_round 58 received 10 results and 0 failures
+fit progress: (58, 0.4962261414317322, {'accuracy': 0.8483}, 225.73745229979977)
+evaluate_round 58: no clients selected, cancel
+fit_round 59: strategy sampled 10 clients (out of 10)
+fit_round 59 received 10 results and 0 failures
+fit progress: (59, 0.4854052879415229, {'accuracy': 0.8516}, 228.02796614775434)
+evaluate_round 59: no clients selected, cancel
+fit_round 60: strategy sampled 10 clients (out of 10)
+fit_round 60 received 10 results and 0 failures
+fit progress: (60, 0.4797732975369363, {'accuracy': 0.8542}, 230.49615338165313)
+evaluate_round 60: no clients selected, cancel
+fit_round 61: strategy sampled 10 clients (out of 10)
+fit_round 61 received 10 results and 0 failures
+fit progress: (61, 0.47879293855515337, {'accuracy': 0.8556}, 232.89252030896023)
+evaluate_round 61: no clients selected, cancel
+fit_round 62: strategy sampled 10 clients (out of 10)
+fit_round 62 received 10 results and 0 failures
+fit progress: (62, 0.4808870718647525, {'accuracy': 0.8543}, 235.2606231458485)
+evaluate_round 62: no clients selected, cancel
+fit_round 63: strategy sampled 10 clients (out of 10)
+fit_round 63 received 10 results and 0 failures
+fit progress: (63, 0.4842630175110887, {'accuracy': 0.8546}, 237.68794606486335)
+evaluate_round 63: no clients selected, cancel
+fit_round 64: strategy sampled 10 clients (out of 10)
+fit_round 64 received 10 results and 0 failures
+fit progress: (64, 0.48752000456544137, {'accuracy': 0.8537}, 240.15096931206062)
+evaluate_round 64: no clients selected, cancel
+fit_round 65: strategy sampled 10 clients (out of 10)
+fit_round 65 received 10 results and 0 failures
+fit progress: (65, 0.48970862315228086, {'accuracy': 0.8533}, 242.58830130286515)
+evaluate_round 65: no clients selected, cancel
+fit_round 66: strategy sampled 10 clients (out of 10)
+fit_round 66 received 10 results and 0 failures
+fit progress: (66, 0.49021503947060474, {'accuracy': 0.8519}, 244.89908041479066)
+evaluate_round 66: no clients selected, cancel
+fit_round 67: strategy sampled 10 clients (out of 10)
+fit_round 67 received 10 results and 0 failures
+fit progress: (67, 0.4885668107795745, {'accuracy': 0.8518}, 247.39878717483953)
+evaluate_round 67: no clients selected, cancel
+fit_round 68: strategy sampled 10 clients (out of 10)
+fit_round 68 received 10 results and 0 failures
+fit progress: (68, 0.4845532735549583, {'accuracy': 0.8534}, 250.0880684768781)
+evaluate_round 68: no clients selected, cancel
+fit_round 69: strategy sampled 10 clients (out of 10)
+fit_round 69 received 10 results and 0 failures
+fit progress: (69, 0.4783856582113755, {'accuracy': 0.8554}, 252.33741536689922)
+evaluate_round 69: no clients selected, cancel
+fit_round 70: strategy sampled 10 clients (out of 10)
+fit_round 70 received 10 results and 0 failures
+fit progress: (70, 0.470804780024298, {'accuracy': 0.8578}, 254.6535086557269)
+evaluate_round 70: no clients selected, cancel
+fit_round 71: strategy sampled 10 clients (out of 10)
+fit_round 71 received 10 results and 0 failures
+fit progress: (71, 0.4628025013310719, {'accuracy': 0.8601}, 257.0589654627256)
+evaluate_round 71: no clients selected, cancel
+fit_round 72: strategy sampled 10 clients (out of 10)
+fit_round 72 received 10 results and 0 failures
+fit progress: (72, 0.45536710736635977, {'accuracy': 0.8634}, 259.1115756877698)
+evaluate_round 72: no clients selected, cancel
+fit_round 73: strategy sampled 10 clients (out of 10)
+fit_round 73 received 10 results and 0 failures
+fit progress: (73, 0.44923330598907535, {'accuracy': 0.8639}, 261.822221650742)
+evaluate_round 73: no clients selected, cancel
+fit_round 74: strategy sampled 10 clients (out of 10)
+fit_round 74 received 10 results and 0 failures
+fit progress: (74, 0.44475452729042353, {'accuracy': 0.8658}, 264.2909380868077)
+evaluate_round 74: no clients selected, cancel
+fit_round 75: strategy sampled 10 clients (out of 10)
+fit_round 75 received 10 results and 0 failures
+fit progress: (75, 0.4419277385930149, {'accuracy': 0.8663}, 266.77721659094095)
+evaluate_round 75: no clients selected, cancel
+fit_round 76: strategy sampled 10 clients (out of 10)
+fit_round 76 received 10 results and 0 failures
+fit progress: (76, 0.4405085537085313, {'accuracy': 0.8666}, 268.865180243738)
+evaluate_round 76: no clients selected, cancel
+fit_round 77: strategy sampled 10 clients (out of 10)
+fit_round 77 received 10 results and 0 failures
+fit progress: (77, 0.44012880535314014, {'accuracy': 0.8667}, 271.5790642509237)
+evaluate_round 77: no clients selected, cancel
+fit_round 78: strategy sampled 10 clients (out of 10)
+fit_round 78 received 10 results and 0 failures
+fit progress: (78, 0.4403507630262818, {'accuracy': 0.866}, 273.6356145357713)
+evaluate_round 78: no clients selected, cancel
+fit_round 79: strategy sampled 10 clients (out of 10)
+fit_round 79 received 10 results and 0 failures
+fit progress: (79, 0.44068917069832714, {'accuracy': 0.866}, 276.2646679957397)
+evaluate_round 79: no clients selected, cancel
+fit_round 80: strategy sampled 10 clients (out of 10)
+fit_round 80 received 10 results and 0 failures
+fit progress: (80, 0.4407094646362044, {'accuracy': 0.8659}, 278.78026084182784)
+evaluate_round 80: no clients selected, cancel
+fit_round 81: strategy sampled 10 clients (out of 10)
+fit_round 81 received 10 results and 0 failures
+fit progress: (81, 0.4400084521324021, {'accuracy': 0.8663}, 281.42645078292117)
+evaluate_round 81: no clients selected, cancel
+fit_round 82: strategy sampled 10 clients (out of 10)
+fit_round 82 received 10 results and 0 failures
+fit progress: (82, 0.4383258750362965, {'accuracy': 0.8674}, 283.56750638363883)
+evaluate_round 82: no clients selected, cancel
+fit_round 83: strategy sampled 10 clients (out of 10)
+fit_round 83 received 10 results and 0 failures
+fit progress: (83, 0.43560831421869944, {'accuracy': 0.8688}, 286.2733677639626)
+evaluate_round 83: no clients selected, cancel
+fit_round 84: strategy sampled 10 clients (out of 10)
+fit_round 84 received 10 results and 0 failures
+fit progress: (84, 0.432045308960465, {'accuracy': 0.8695}, 288.3144483137876)
+evaluate_round 84: no clients selected, cancel
+fit_round 85: strategy sampled 10 clients (out of 10)
+fit_round 85 received 10 results and 0 failures
+fit progress: (85, 0.4279905241075528, {'accuracy': 0.871}, 290.9724268228747)
+evaluate_round 85: no clients selected, cancel
+fit_round 86: strategy sampled 10 clients (out of 10)
+fit_round 86 received 10 results and 0 failures
+fit progress: (86, 0.42387160613640673, {'accuracy': 0.872}, 293.5158084477298)
+evaluate_round 86: no clients selected, cancel
+fit_round 87: strategy sampled 10 clients (out of 10)
+fit_round 87 received 10 results and 0 failures
+fit progress: (87, 0.42010229779719127, {'accuracy': 0.8733}, 296.0286265448667)
+evaluate_round 87: no clients selected, cancel
+fit_round 88: strategy sampled 10 clients (out of 10)
+fit_round 88 received 10 results and 0 failures
+fit progress: (88, 0.41703091823583216, {'accuracy': 0.8739}, 298.1066328547895)
+evaluate_round 88: no clients selected, cancel
+fit_round 89: strategy sampled 10 clients (out of 10)
+fit_round 89 received 10 results and 0 failures
+fit progress: (89, 0.4148273725623848, {'accuracy': 0.8745}, 300.87178647564724)
+evaluate_round 89: no clients selected, cancel
+fit_round 90: strategy sampled 10 clients (out of 10)
+fit_round 90 received 10 results and 0 failures
+fit progress: (90, 0.4135265670697209, {'accuracy': 0.875}, 302.9189176429063)
+evaluate_round 90: no clients selected, cancel
+fit_round 91: strategy sampled 10 clients (out of 10)
+fit_round 91 received 10 results and 0 failures
+fit progress: (91, 0.4130180437209839, {'accuracy': 0.8753}, 305.49626128003)
+evaluate_round 91: no clients selected, cancel
+fit_round 92: strategy sampled 10 clients (out of 10)
+fit_round 92 received 10 results and 0 failures
+fit progress: (92, 0.4130553072766969, {'accuracy': 0.8747}, 308.1146262176335)
+evaluate_round 92: no clients selected, cancel
+fit_round 93: strategy sampled 10 clients (out of 10)
+fit_round 93 received 10 results and 0 failures
+fit progress: (93, 0.4132851282705482, {'accuracy': 0.8745}, 310.7282638186589)
+evaluate_round 93: no clients selected, cancel
+fit_round 94: strategy sampled 10 clients (out of 10)
+fit_round 94 received 10 results and 0 failures
+fit progress: (94, 0.4133489122381876, {'accuracy': 0.8746}, 312.7872248017229)
+evaluate_round 94: no clients selected, cancel
+fit_round 95: strategy sampled 10 clients (out of 10)
+fit_round 95 received 10 results and 0 failures
+fit progress: (95, 0.4129211784378259, {'accuracy': 0.8749}, 315.5314496937208)
+evaluate_round 95: no clients selected, cancel
+fit_round 96: strategy sampled 10 clients (out of 10)
+fit_round 96 received 10 results and 0 failures
+fit progress: (96, 0.4118386201495465, {'accuracy': 0.8761}, 317.54418160999194)
+evaluate_round 96: no clients selected, cancel
+fit_round 97: strategy sampled 10 clients (out of 10)
+fit_round 97 received 10 results and 0 failures
+fit progress: (97, 0.4100773560536767, {'accuracy': 0.8769}, 320.19533260399476)
+evaluate_round 97: no clients selected, cancel
+fit_round 98: strategy sampled 10 clients (out of 10)
+fit_round 98 received 10 results and 0 failures
+fit progress: (98, 0.4077998456302304, {'accuracy': 0.8776}, 322.81411946192384)
+evaluate_round 98: no clients selected, cancel
+fit_round 99: strategy sampled 10 clients (out of 10)
+fit_round 99 received 10 results and 0 failures
+fit progress: (99, 0.40525233366600066, {'accuracy': 0.8793}, 325.2638328727335)
+evaluate_round 99: no clients selected, cancel
+fit_round 100: strategy sampled 10 clients (out of 10)
+fit_round 100 received 10 results and 0 failures
+fit progress: (100, 0.4027255225013151, {'accuracy': 0.8801}, 327.33475383603945)
+evaluate_round 100: no clients selected, cancel
+fit_round 101: strategy sampled 10 clients (out of 10)
+fit_round 101 received 10 results and 0 failures
+fit progress: (101, 0.4004680696555588, {'accuracy': 0.881}, 330.04126616287977)
+evaluate_round 101: no clients selected, cancel
+fit_round 102: strategy sampled 10 clients (out of 10)
+fit_round 102 received 10 results and 0 failures
+fit progress: (102, 0.398660993028622, {'accuracy': 0.8821}, 332.09272662876174)
+evaluate_round 102: no clients selected, cancel
+fit_round 103: strategy sampled 10 clients (out of 10)
+fit_round 103 received 10 results and 0 failures
+fit progress: (103, 0.39737914721464324, {'accuracy': 0.8825}, 334.7418745160103)
+evaluate_round 103: no clients selected, cancel
+fit_round 104: strategy sampled 10 clients (out of 10)
+fit_round 104 received 10 results and 0 failures
+fit progress: (104, 0.39658499230415073, {'accuracy': 0.8828}, 337.24015060067177)
+evaluate_round 104: no clients selected, cancel
+fit_round 105: strategy sampled 10 clients (out of 10)
+fit_round 105 received 10 results and 0 failures
+fit progress: (105, 0.3961534661122735, {'accuracy': 0.8831}, 339.8575902329758)
+evaluate_round 105: no clients selected, cancel
+fit_round 106: strategy sampled 10 clients (out of 10)
+fit_round 106 received 10 results and 0 failures
+fit progress: (106, 0.39590420890156575, {'accuracy': 0.8834}, 341.85747627774253)
+evaluate_round 106: no clients selected, cancel
+fit_round 107: strategy sampled 10 clients (out of 10)
+fit_round 107 received 10 results and 0 failures
+fit progress: (107, 0.3956530391001618, {'accuracy': 0.8834}, 344.4266250557266)
+evaluate_round 107: no clients selected, cancel
+fit_round 108: strategy sampled 10 clients (out of 10)
+fit_round 108 received 10 results and 0 failures
+fit progress: (108, 0.3952272607198798, {'accuracy': 0.8841}, 346.44486917881295)
+evaluate_round 108: no clients selected, cancel
+fit_round 109: strategy sampled 10 clients (out of 10)
+fit_round 109 received 10 results and 0 failures
+fit progress: (109, 0.39450937809922637, {'accuracy': 0.8847}, 349.054870611988)
+evaluate_round 109: no clients selected, cancel
+fit_round 110: strategy sampled 10 clients (out of 10)
+fit_round 110 received 10 results and 0 failures
+fit progress: (110, 0.39347078497338994, {'accuracy': 0.885}, 351.23269351478666)
+evaluate_round 110: no clients selected, cancel
+fit_round 111: strategy sampled 10 clients (out of 10)
+fit_round 111 received 10 results and 0 failures
+fit progress: (111, 0.39215324372468624, {'accuracy': 0.8852}, 353.4729072158225)
+evaluate_round 111: no clients selected, cancel
+fit_round 112: strategy sampled 10 clients (out of 10)
+fit_round 112 received 10 results and 0 failures
+fit progress: (112, 0.3906649706113631, {'accuracy': 0.8853}, 355.5812557786703)
+evaluate_round 112: no clients selected, cancel
+fit_round 113: strategy sampled 10 clients (out of 10)
+fit_round 113 received 10 results and 0 failures
+fit progress: (113, 0.38915303321966394, {'accuracy': 0.8859}, 358.04328308673576)
+evaluate_round 113: no clients selected, cancel
+fit_round 114: strategy sampled 10 clients (out of 10)
+fit_round 114 received 10 results and 0 failures
+fit progress: (114, 0.3877520145009344, {'accuracy': 0.8867}, 360.0732872360386)
+evaluate_round 114: no clients selected, cancel
+fit_round 115: strategy sampled 10 clients (out of 10)
+fit_round 115 received 10 results and 0 failures
+fit progress: (115, 0.38655774777339497, {'accuracy': 0.8873}, 362.1381061109714)
+evaluate_round 115: no clients selected, cancel
+fit_round 116: strategy sampled 10 clients (out of 10)
+fit_round 116 received 10 results and 0 failures
+fit progress: (116, 0.38561672567934246, {'accuracy': 0.8874}, 364.5422075386159)
+evaluate_round 116: no clients selected, cancel
+fit_round 117: strategy sampled 10 clients (out of 10)
+fit_round 117 received 10 results and 0 failures
+fit progress: (117, 0.3849165019185953, {'accuracy': 0.888}, 367.07422704575583)
+evaluate_round 117: no clients selected, cancel
+fit_round 118: strategy sampled 10 clients (out of 10)
+fit_round 118 received 10 results and 0 failures
+fit progress: (118, 0.3844018756920643, {'accuracy': 0.8883}, 369.48278131801635)
+evaluate_round 118: no clients selected, cancel
+fit_round 119: strategy sampled 10 clients (out of 10)
+fit_round 119 received 10 results and 0 failures
+fit progress: (119, 0.38399630217346215, {'accuracy': 0.8883}, 371.49195472570136)
+evaluate_round 119: no clients selected, cancel
+fit_round 120: strategy sampled 10 clients (out of 10)
+fit_round 120 received 10 results and 0 failures
+fit progress: (120, 0.38360681650586786, {'accuracy': 0.8887}, 374.1935385847464)
+evaluate_round 120: no clients selected, cancel
+fit_round 121: strategy sampled 10 clients (out of 10)
+fit_round 121 received 10 results and 0 failures
+fit progress: (121, 0.38315383913943146, {'accuracy': 0.8891}, 376.2013242188841)
+evaluate_round 121: no clients selected, cancel
+fit_round 122: strategy sampled 10 clients (out of 10)
+fit_round 122 received 10 results and 0 failures
+fit progress: (122, 0.3825822494930953, {'accuracy': 0.8893}, 378.8371250219643)
+evaluate_round 122: no clients selected, cancel
+fit_round 123: strategy sampled 10 clients (out of 10)
+fit_round 123 received 10 results and 0 failures
+fit progress: (123, 0.3818761368796758, {'accuracy': 0.8896}, 381.245094996877)
+evaluate_round 123: no clients selected, cancel
+fit_round 124: strategy sampled 10 clients (out of 10)
+fit_round 124 received 10 results and 0 failures
+fit progress: (124, 0.3810424586962762, {'accuracy': 0.8898}, 383.873750644736)
+evaluate_round 124: no clients selected, cancel
+fit_round 125: strategy sampled 10 clients (out of 10)
+fit_round 125 received 10 results and 0 failures
+fit progress: (125, 0.38012123145597854, {'accuracy': 0.8901}, 385.88525107782334)
+evaluate_round 125: no clients selected, cancel
+fit_round 126: strategy sampled 10 clients (out of 10)
+fit_round 126 received 10 results and 0 failures
+fit progress: (126, 0.37918414894276237, {'accuracy': 0.8905}, 388.435503421817)
+evaluate_round 126: no clients selected, cancel
+fit_round 127: strategy sampled 10 clients (out of 10)
+fit_round 127 received 10 results and 0 failures
+fit progress: (127, 0.37829509863257665, {'accuracy': 0.8913}, 390.4575689570047)
+evaluate_round 127: no clients selected, cancel
+fit_round 128: strategy sampled 10 clients (out of 10)
+fit_round 128 received 10 results and 0 failures
+fit progress: (128, 0.37749783932628145, {'accuracy': 0.8916}, 392.90612082881853)
+evaluate_round 128: no clients selected, cancel
+fit_round 129: strategy sampled 10 clients (out of 10)
+fit_round 129 received 10 results and 0 failures
+fit progress: (129, 0.37681180884205184, {'accuracy': 0.8919}, 394.98533965973184)
+evaluate_round 129: no clients selected, cancel
+fit_round 130: strategy sampled 10 clients (out of 10)
+fit_round 130 received 10 results and 0 failures
+fit progress: (130, 0.3762497670628866, {'accuracy': 0.8921}, 397.59462689980865)
+evaluate_round 130: no clients selected, cancel
+fit_round 131: strategy sampled 10 clients (out of 10)
+fit_round 131 received 10 results and 0 failures
+fit progress: (131, 0.37576362618277015, {'accuracy': 0.8922}, 399.68603449873626)
+evaluate_round 131: no clients selected, cancel
+fit_round 132: strategy sampled 10 clients (out of 10)
+fit_round 132 received 10 results and 0 failures
+fit progress: (132, 0.37532542302109934, {'accuracy': 0.8923}, 401.99526542890817)
+evaluate_round 132: no clients selected, cancel
+fit_round 133: strategy sampled 10 clients (out of 10)
+fit_round 133 received 10 results and 0 failures
+fit progress: (133, 0.37490059714061, {'accuracy': 0.8927}, 404.2598401289433)
+evaluate_round 133: no clients selected, cancel
+fit_round 134: strategy sampled 10 clients (out of 10)
+fit_round 134 received 10 results and 0 failures
+fit progress: (134, 0.37446690462185794, {'accuracy': 0.8927}, 406.26676693279296)
+evaluate_round 134: no clients selected, cancel
+fit_round 135: strategy sampled 10 clients (out of 10)
+fit_round 135 received 10 results and 0 failures
+fit progress: (135, 0.3739953008634554, {'accuracy': 0.893}, 408.6007680539042)
+evaluate_round 135: no clients selected, cancel
+fit_round 136: strategy sampled 10 clients (out of 10)
+fit_round 136 received 10 results and 0 failures
+fit progress: (136, 0.3734688803902241, {'accuracy': 0.8933}, 411.0805453588255)
+evaluate_round 136: no clients selected, cancel
+fit_round 137: strategy sampled 10 clients (out of 10)
+fit_round 137 received 10 results and 0 failures
+fit progress: (137, 0.3729007956207531, {'accuracy': 0.8932}, 413.48327728779987)
+evaluate_round 137: no clients selected, cancel
+fit_round 138: strategy sampled 10 clients (out of 10)
+fit_round 138 received 10 results and 0 failures
+fit progress: (138, 0.3722986371437948, {'accuracy': 0.8933}, 415.5482836039737)
+evaluate_round 138: no clients selected, cancel
+fit_round 139: strategy sampled 10 clients (out of 10)
+fit_round 139 received 10 results and 0 failures
+fit progress: (139, 0.37168872671026126, {'accuracy': 0.8935}, 418.3065390456468)
+evaluate_round 139: no clients selected, cancel
+fit_round 140: strategy sampled 10 clients (out of 10)
+fit_round 140 received 10 results and 0 failures
+fit progress: (140, 0.3710933010393177, {'accuracy': 0.8937}, 420.3159019029699)
+evaluate_round 140: no clients selected, cancel
+fit_round 141: strategy sampled 10 clients (out of 10)
+fit_round 141 received 10 results and 0 failures
+fit progress: (141, 0.3705395605262257, {'accuracy': 0.8939}, 423.006488032639)
+evaluate_round 141: no clients selected, cancel
+fit_round 142: strategy sampled 10 clients (out of 10)
+fit_round 142 received 10 results and 0 failures
+fit progress: (142, 0.3700532945255234, {'accuracy': 0.8939}, 425.1996210827492)
+evaluate_round 142: no clients selected, cancel
+fit_round 143: strategy sampled 10 clients (out of 10)
+fit_round 143 received 10 results and 0 failures
+fit progress: (143, 0.36962669955262534, {'accuracy': 0.8939}, 427.8238125760108)
+evaluate_round 143: no clients selected, cancel
+fit_round 144: strategy sampled 10 clients (out of 10)
+fit_round 144 received 10 results and 0 failures
+fit progress: (144, 0.3692564578502708, {'accuracy': 0.8941}, 429.8830543118529)
+evaluate_round 144: no clients selected, cancel
+fit_round 145: strategy sampled 10 clients (out of 10)
+fit_round 145 received 10 results and 0 failures
+fit progress: (145, 0.3689424800892299, {'accuracy': 0.8945}, 432.6202341238968)
+evaluate_round 145: no clients selected, cancel
+fit_round 146: strategy sampled 10 clients (out of 10)
+fit_round 146 received 10 results and 0 failures
+fit progress: (146, 0.36867035169844564, {'accuracy': 0.8947}, 434.6487333867699)
+evaluate_round 146: no clients selected, cancel
+fit_round 147: strategy sampled 10 clients (out of 10)
+fit_round 147 received 10 results and 0 failures
+fit progress: (147, 0.3684238688651696, {'accuracy': 0.8947}, 437.03335491986945)
+evaluate_round 147: no clients selected, cancel
+fit_round 148: strategy sampled 10 clients (out of 10)
+fit_round 148 received 10 results and 0 failures
+fit progress: (148, 0.36817531520319474, {'accuracy': 0.895}, 439.10277540795505)
+evaluate_round 148: no clients selected, cancel
+fit_round 149: strategy sampled 10 clients (out of 10)
+fit_round 149 received 10 results and 0 failures
+fit progress: (149, 0.36790231440989296, {'accuracy': 0.895}, 441.8046445567161)
+evaluate_round 149: no clients selected, cancel
+fit_round 150: strategy sampled 10 clients (out of 10)
+fit_round 150 received 10 results and 0 failures
+fit progress: (150, 0.36760897474168125, {'accuracy': 0.8948}, 443.8461114820093)
+evaluate_round 150: no clients selected, cancel
+fit_round 151: strategy sampled 10 clients (out of 10)
+fit_round 151 received 10 results and 0 failures
+fit progress: (151, 0.36730488737667977, {'accuracy': 0.8949}, 445.962184201926)
+evaluate_round 151: no clients selected, cancel
+fit_round 152: strategy sampled 10 clients (out of 10)
+fit_round 152 received 10 results and 0 failures
+fit progress: (152, 0.3669921598125233, {'accuracy': 0.8952}, 448.51152147585526)
+evaluate_round 152: no clients selected, cancel
+fit_round 153: strategy sampled 10 clients (out of 10)
+fit_round 153 received 10 results and 0 failures
+fit progress: (153, 0.3666875712337003, {'accuracy': 0.8957}, 450.5297412169166)
+evaluate_round 153: no clients selected, cancel
+fit_round 154: strategy sampled 10 clients (out of 10)
+fit_round 154 received 10 results and 0 failures
+fit progress: (154, 0.3664104842617204, {'accuracy': 0.8959}, 452.91104157269)
+evaluate_round 154: no clients selected, cancel
+fit_round 155: strategy sampled 10 clients (out of 10)
+fit_round 155 received 10 results and 0 failures
+fit progress: (155, 0.366170274971088, {'accuracy': 0.8961}, 455.4350360208191)
+evaluate_round 155: no clients selected, cancel
+fit_round 156: strategy sampled 10 clients (out of 10)
+fit_round 156 received 10 results and 0 failures
+fit progress: (156, 0.36598321334521905, {'accuracy': 0.8965}, 457.73517522169277)
+evaluate_round 156: no clients selected, cancel
+fit_round 157: strategy sampled 10 clients (out of 10)
+fit_round 157 received 10 results and 0 failures
+fit progress: (157, 0.3658586551374313, {'accuracy': 0.8967}, 459.7342477450147)
+evaluate_round 157: no clients selected, cancel
+fit_round 158: strategy sampled 10 clients (out of 10)
+fit_round 158 received 10 results and 0 failures
+fit progress: (158, 0.3657798878502608, {'accuracy': 0.897}, 462.42720940103754)
+evaluate_round 158: no clients selected, cancel
+fit_round 159: strategy sampled 10 clients (out of 10)
+fit_round 159 received 10 results and 0 failures
+fit progress: (159, 0.3657191759561312, {'accuracy': 0.8972}, 464.49456409178674)
+evaluate_round 159: no clients selected, cancel
+fit_round 160: strategy sampled 10 clients (out of 10)
+fit_round 160 received 10 results and 0 failures
+fit progress: (160, 0.3656687373692042, {'accuracy': 0.8974}, 467.2347563127987)
+evaluate_round 160: no clients selected, cancel
+fit_round 161: strategy sampled 10 clients (out of 10)
+fit_round 161 received 10 results and 0 failures
+fit progress: (161, 0.3656158204004818, {'accuracy': 0.8974}, 469.327818301972)
+evaluate_round 161: no clients selected, cancel
+fit_round 162: strategy sampled 10 clients (out of 10)
