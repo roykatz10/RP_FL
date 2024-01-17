@@ -22,13 +22,16 @@ parser.add_argument("--nc", type=int, default=2)
 parser.add_argument("--rho", type=float, default=0.5)
 parser.add_argument("--fn", type=str, default="output.txt")
 parser.add_argument("--dset", type=str, default="MNIST_10c")
-parser.add_argument("--central", type=bool, default=False)
+parser.add_argument("--central", type=int, default=0)
 args = parser.parse_args()
 
+# typecast bc argparse is a piece of shit
+args.central = bool(args.central)
 
-if args.central:
+print(f'args.central: {args.central}')
+if args.central==True:
     NUM_CLIENTS = 1
-else:
+else: 
     NUM_CLIENTS = args.nc
 NUM_ROUNDS = args.nro
 DEVICE = torch.device("cpu")  # use cpu for all evaluation purposes

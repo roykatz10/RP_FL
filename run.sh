@@ -1,11 +1,11 @@
 #!/bin/bash
-nc=1
+nc=2
 nro=10
 str=0
 lr=0.1
 rho=0.5
 dset="MNIST_10c"
-
+central=0
 
 while true;
 do
@@ -16,7 +16,7 @@ do
         --lr) lr=$2; shift 2;;
         --rho) rho=$2; shift 2;;
         --dset) dset=$2; shift 2;;
-        --central) central=True; shift 1;;
+        --central) central=1; shift 1;;
         --) shift;  break   ;;
         *)  break ;;
     esac

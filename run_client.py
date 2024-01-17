@@ -29,17 +29,19 @@ parser.add_argument("--dset", type=str, default="MNIST_10c")
 parser.add_argument("--iid", type=bool, default=True)
 parser.add_argument("--ed", type=bool, default=True)
 parser.add_argument("--str", type=int, default=0)
-parser.add_argument("--central", type=bool, default=False)
+parser.add_argument("--central", type=int, default=0)
 args = parser.parse_args()
 
 
-#id = args.cid
-id = os.environ['SLURM_PROCID']
+args.central = bool(args.central)
 
-if args.central:
+id = args.cid
+#id = os.environ['SLURM_PROCID']
+
+if args.central==True:
     X_train, y_train = get_central_train_data(args.dset, device=DEVICE)
 else:
-    X_train, y_train = get_train_data(args.dset, id, central=args.central, iid = args.iid, ed = args.ed, device=DEVICE)
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
 # X_test = torch.load("Data/x_test.pt")
 # y_test = torch.load("Data/y_test.pt")
 

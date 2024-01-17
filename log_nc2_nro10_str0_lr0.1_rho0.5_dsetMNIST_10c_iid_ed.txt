@@ -4,3 +4,19 @@ Initializing global parameters
 Requesting initial parameters from one random client
 Received initial parameters from one random client
 Evaluating initial parameters
+initial parameters (loss, other metrics): 2.3054175636779415, {'accuracy': 0.0982}
+FL starting
+fit_round 1: strategy sampled 2 clients (out of 2)
+fit_round 1 received 2 results and 0 failures
+No fit_metrics_aggregation_fn provided
+fit progress: (1, 1.8438765347281352, {'accuracy': 0.3101}, 17.1608461830765)
+evaluate_round 1: no clients selected, cancel
+fit_round 2: strategy sampled 2 clients (out of 2)
+fit_round 2 received 2 results and 0 failures
+fit progress: (2, 1.910259978303736, {'accuracy': 0.259}, 35.05302173830569)
+evaluate_round 2: no clients selected, cancel
+fit_round 3: strategy sampled 2 clients (out of 2)
+fit_round 3 received 2 results and 0 failures
+fit progress: (3, 1.9491938255379704, {'accuracy': 0.231}, 52.89042252022773)
+evaluate_round 3: no clients selected, cancel
+fit_round 4: strategy sampled 2 clients (out of 2)
