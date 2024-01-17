@@ -67,7 +67,11 @@ class Net(nn.Module):
                 opt.zero_grad()
                 # print(images)
                 outputs = self.forward(images)
+                #print(f'image shape: {images.shape}')
+                #print(f'output shape: {outputs.shape}')
                 labels = labels.long()
+                #labels = labels.view(1, -1)
+                #print(f'labels shape: {labels.shape}')
                 # if(len(outputs) != labels.dim):
                 #     print('fuck:', len(outputs), labels.dim)
                 loss = criterion(outputs, labels)

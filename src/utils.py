@@ -41,6 +41,7 @@ def get_train_data(dset, id, iid = True, ed = True, device = "cpu"):
         raise(ValueError(f"{__name__}: unknown dataset: {dset}"))
     X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
     y_train = torch.load(f"{full_path}/y_train_id{id}.pt", map_location=device)
+    y_train = y_train.reshape(-1, 1)
     return X_train, y_train
 
 
@@ -56,6 +57,7 @@ def get_central_train_data(dset, device='gpu'):
         raise(ValueError(f'unkown dataset: {dset}'))
     X_train = torch.load(f"{full_path}x_train_full.pt", map_location=device).double()
     y_train = torch.load(f"{full_path}y_train_full.pt", map_location=device).double()
+    y_train = y_train.reshape(-1, 1)
     return X_train, y_train
 
 def get_test_data(dset, device = "cpu"):
@@ -68,10 +70,11 @@ def get_test_data(dset, device = "cpu"):
         raise(NotImplementedError(f"{__name__}: still need to implement camelyon"))
     else:
         raise(ValueError(f"{__name__}: unknown dataset: {dset}"))
-    X_train = torch.load(f"{full_path}x_test.pt", map_location=device).double()
-    y_train = torch.load(f"{full_path}y_test.pt", map_location=device)
+    X_test = torch.load(f"{full_path}x_test.pt", map_location=device).double()
+    y_test = torch.load(f"{full_path}y_test.pt", map_location=device)
+    y_test = y_test.reshape(-1, 1)
     # print(f'y_test shape: {y_train.shape}')
-    return X_train, y_train
+    return X_test, y_test
 
 
 def get_arch(dset):

@@ -1,11 +1,11 @@
 #!/bin/bash
-nc=2
+nc=1
 nro=10
-str=5
+str=0
 lr=0.1
 rho=0.5
 dset="MNIST_10c"
-central=False
+
 
 while true;
 do
@@ -31,9 +31,10 @@ if test -f "$filename"; then
   rm "$filename"
 fi
 
+echo "central $central"
 
 # startup server
-python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename & 
+python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename --central $central & 
 
 # whole bunch of stuff to make sure we're waiting for the server over here
 finished=0
@@ -58,7 +59,7 @@ done
 for ((i = 0; i<=$nc-1; i++))
 do 
     sleep 1
-    python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} --str $str &
+    python run_client.py --cid $i --lr ${lr} --rho ${rho} --dset ${dset} --str $str --central $central &
 done
 
 wait $!
