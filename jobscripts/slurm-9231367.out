@@ -47,3 +47,29 @@ INFO flwr 2024-01-17 15:23:48,314 | grpc.py:50 | Opened insecure gRPC connection
 DEBUG flwr 2024-01-17 15:23:48,315 | connection.py:39 | ChannelConnectivity.IDLE
 DEBUG flwr 2024-01-17 15:23:48,316 | connection.py:39 | ChannelConnectivity.CONNECTING
 DEBUG flwr 2024-01-17 15:23:48,319 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-17 16:03:51,878 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:03:51,879 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 16:07:26,590 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:07:26,590 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 16:07:26,594 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-17 16:07:26,594 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-17 16:07:26,594 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-17 16:07:26,594 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-17 16:07:26,594 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:07:26,594 | app.py:185 | Disconnect and shut down
+INFO flwr 2024-01-17 16:07:26,594 | app.py:185 | Disconnect and shut down
+INFO flwr 2024-01-17 16:07:26,594 | app.py:185 | Disconnect and shut down
+INFO flwr 2024-01-17 16:07:26,594 | app.py:185 | Disconnect and shut down
+INFO flwr 2024-01-17 16:07:26,594 | app.py:185 | Disconnect and shut down
+booting up client 0
+booting up client 0
+booting up client 0
+booting up client 0
+booting up client 0
+slurmstepd: error: *** JOB 9231367 ON 3dgi2 CANCELLED AT 2024-01-17T19:22:06 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9231367.0 ON 3dgi2 CANCELLED AT 2024-01-17T19:22:06 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9231367.1 ON 3dgi2 CANCELLED AT 2024-01-17T19:22:06 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

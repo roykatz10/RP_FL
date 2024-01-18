@@ -47,3 +47,35 @@ INFO flwr 2024-01-17 15:24:29,338 | grpc.py:50 | Opened insecure gRPC connection
 DEBUG flwr 2024-01-17 15:24:29,340 | connection.py:39 | ChannelConnectivity.IDLE
 DEBUG flwr 2024-01-17 15:24:29,340 | connection.py:39 | ChannelConnectivity.CONNECTING
 DEBUG flwr 2024-01-17 15:24:29,344 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-17 15:40:14,642 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-17 15:40:14,642 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-17 15:40:14,642 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:40:14,642 | app.py:185 | Disconnect and shut down
+INFO flwr 2024-01-17 15:40:14,643 | app.py:185 | Disconnect and shut down
+INFO flwr 2024-01-17 15:40:14,643 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2024-01-17 15:40:14,642 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:40:14,643 | app.py:185 | Disconnect and shut down
+booting up client 0
+booting up client 0
+booting up client 0
+booting up client 0
+DEBUG flwr 2024-01-17 15:57:02,225 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:57:02,225 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2024-01-17 15:57:02,225 | connection.py:113 | gRPC channel closed
+booting up client 0
+INFO flwr 2024-01-17 15:57:02,225 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 15:57:15,342 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:57:15,342 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 15:57:15,342 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:57:15,342 | app.py:185 | Disconnect and shut down
+booting up client 0
+booting up client 0
+DEBUG flwr 2024-01-17 16:13:19,193 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+slurmstepd: error: *** STEP 9231369.1 ON gpu03 CANCELLED AT 2024-01-17T19:22:36 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9231369 ON gpu03 CANCELLED AT 2024-01-17T19:22:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9231369.0 ON gpu03 CANCELLED AT 2024-01-17T19:22:36 DUE TO TIME LIMIT ***

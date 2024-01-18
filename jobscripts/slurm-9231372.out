@@ -68,3 +68,36 @@ Traceback (most recent call last):
   File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/ADMM_strategy.py", line 28, in aggregate_fit
     y_local = json.loads(res.metrics["Y"].decode("utf-8"))
 KeyError: 'Y'
+DEBUG flwr 2024-01-17 15:57:02,225 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:57:02,225 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 15:57:15,342 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 15:57:15,343 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 16:13:19,192 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+DEBUG flwr 2024-01-17 16:13:19,193 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+booting up client 0
+booting up client 0
+DEBUG flwr 2024-01-17 16:13:19,193 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 16:13:19,193 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 16:13:19,193 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+booting up client 0
+DEBUG flwr 2024-01-17 16:13:19,193 | connection.py:113 | gRPC channel closed
+INFO flwr 2024-01-17 16:13:19,193 | app.py:185 | Disconnect and shut down
+booting up client 0
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9231372.0 ON gpu03 CANCELLED AT 2024-01-17T19:22:36 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+DEBUG flwr 2024-01-17 19:22:36,490 | connection.py:113 | gRPC channel closed
+booting up client 0
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+slurmstepd: error: *** JOB 9231372 ON gpu03 CANCELLED AT 2024-01-17T19:22:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9231372.1 ON gpu03 CANCELLED AT 2024-01-17T19:22:36 DUE TO TIME LIMIT ***
