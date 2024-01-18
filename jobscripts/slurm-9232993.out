@@ -1,0 +1,79 @@
+INFO flwr 2024-01-18 11:25:23,210 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-01-18 11:25:23,297 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-01-18 11:25:23,297 | server.py:86 | Initializing global parameters
+INFO flwr 2024-01-18 11:25:23,298 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2024-01-18 11:25:32,668 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:25:32,672 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:25:32,673 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:25:32,679 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:25:32,709 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:25:32,746 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:25:32,746 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:25:32,750 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-18 11:25:41,271 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:25:41,474 | connection.py:113 | gRPC channel closed
+booting up client 0
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B::%5D:8080 {created_time:"2024-01-18T11:25:41.270437798+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+srun: error: awi22: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9232993.1
+slurmstepd: error: *** STEP 9232993.1 ON awi22 CANCELLED AT 2024-01-18T11:25:42 ***
+srun: error: awi22: task 1: Terminated
+srun: Force Terminated StepId=9232993.1
+srun: Job 9232993 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 9232993
+INFO flwr 2024-01-18 11:27:35,289 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:27:35,300 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:27:35,300 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:27:35,307 | connection.py:39 | ChannelConnectivity.READY
+booting up client 0
+DEBUG flwr 2024-01-18 11:27:51,921 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 178, in start_client
+    client_message, sleep_duration, keep_going = handle(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 67, in handle
+    return _fit(client, server_msg.fit_ins), 0, True
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 126, in _fit
+    fit_res = maybe_call_fit(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/Default_client.py", line 127, in fit
+    self.set_parameters(parameters, config)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/Default_client.py", line 124, in set_parameters
+    self.net.set_parameters(parameters)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/Default_client.py", line 54, in set_parameters
+    self.load_state_dict(state_dict, strict=True)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Net:
+	size mismatch for linear_relu_stack.0.weight: copying a param with shape torch.Size([128, 784]) from checkpoint, the shape in current model is torch.Size([256, 8192]).
+	size mismatch for linear_relu_stack.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for linear_relu_stack.2.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+	size mismatch for linear_relu_stack.2.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for linear_relu_stack.4.weight: copying a param with shape torch.Size([10, 64]) from checkpoint, the shape in current model is torch.Size([2, 128]).
+	size mismatch for linear_relu_stack.4.bias: copying a param with shape torch.Size([10]) from checkpoint, the shape in current model is torch.Size([2]).
+srun: error: awi22: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9232993.3

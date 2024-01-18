@@ -1,0 +1,42 @@
+INFO flwr 2024-01-18 11:25:23,767 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-01-18 11:25:23,807 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-01-18 11:25:23,808 | server.py:86 | Initializing global parameters
+INFO flwr 2024-01-18 11:25:23,808 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2024-01-18 11:25:31,411 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:25:31,449 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:25:31,451 | connection.py:39 | ChannelConnectivity.READY
+booting up client 0
+DEBUG flwr 2024-01-18 11:25:31,655 | connection.py:113 | gRPC channel closed
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 178, in start_client
+    client_message, sleep_duration, keep_going = handle(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 67, in handle
+    return _fit(client, server_msg.fit_ins), 0, True
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 126, in _fit
+    fit_res = maybe_call_fit(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/ADMM_client.py", line 108, in fit
+    self.set_parameters(parameters, config)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/Default_client.py", line 124, in set_parameters
+    self.net.set_parameters(parameters)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/Default_client.py", line 54, in set_parameters
+    self.load_state_dict(state_dict, strict=True)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for ADMM_Net:
+	size mismatch for linear_relu_stack.0.weight: copying a param with shape torch.Size([128, 784]) from checkpoint, the shape in current model is torch.Size([256, 8192]).
+	size mismatch for linear_relu_stack.0.bias: copying a param with shape torch.Size([128]) from checkpoint, the shape in current model is torch.Size([256]).
+	size mismatch for linear_relu_stack.2.weight: copying a param with shape torch.Size([64, 128]) from checkpoint, the shape in current model is torch.Size([128, 256]).
+	size mismatch for linear_relu_stack.2.bias: copying a param with shape torch.Size([64]) from checkpoint, the shape in current model is torch.Size([128]).
+	size mismatch for linear_relu_stack.4.weight: copying a param with shape torch.Size([10, 64]) from checkpoint, the shape in current model is torch.Size([2, 128]).
+	size mismatch for linear_relu_stack.4.bias: copying a param with shape torch.Size([10]) from checkpoint, the shape in current model is torch.Size([2]).
+srun: error: awi20: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9232995.1

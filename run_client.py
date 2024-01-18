@@ -37,8 +37,8 @@ args.central = bool(args.central)
 args.iid = bool(args.iid)
 args.ed = bool(args.ed)
 
-id = args.cid
-#id = os.environ['SLURM_PROCID']
+#id = args.cid
+id = os.environ['SLURM_PROCID']
 
 if args.central==True:
     X_train, y_train = get_central_train_data(args.dset, device=DEVICE)

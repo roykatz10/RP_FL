@@ -1,0 +1,29 @@
+INFO flwr 2024-01-18 11:25:24,006 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-01-18 11:25:24,043 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-01-18 11:25:24,043 | server.py:86 | Initializing global parameters
+INFO flwr 2024-01-18 11:25:24,044 | server.py:269 | Using initial parameters provided by strategy
+INFO flwr 2024-01-18 11:25:24,044 | server.py:88 | Evaluating initial parameters
+server booted up. starting clients...
+/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/nn/modules/container.py:217: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  input = module(input)
+INFO flwr 2024-01-18 11:25:24,721 | server.py:91 | initial parameters (loss, other metrics): 0.693530146552513, {'accuracy': 0.4720357941834452}
+INFO flwr 2024-01-18 11:25:24,721 | server.py:101 | FL starting
+INFO flwr 2024-01-18 11:25:32,977 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2024-01-18 11:25:32,998 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:25:33,024 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:25:33,025 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:25:33,027 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-18 11:25:33,037 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:25:33,038 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:25:33,041 | connection.py:39 | ChannelConnectivity.READY
+srun: Job 9232994 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 9232994 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9232994 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 9232994 step creation still disabled, retrying (Requested nodes are busy)
+srun: error: get_addr_info: getaddrinfo() failed: Name or service not known
+srun: error: slurm_set_addr: Unable to resolve "insy-control1"
+srun: error: Unable to establish control machine address
+srun: error: Unable to create step for job 9232994: No such file or directory
+slurmstepd: error: get_addr_info: getaddrinfo() failed: Name or service not known
+slurmstepd: error: slurm_set_addr: Unable to resolve "insy-control1"
+slurmstepd: error: Unable to establish control machine address

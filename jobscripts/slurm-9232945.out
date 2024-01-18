@@ -1,0 +1,182 @@
+INFO flwr 2024-01-18 11:20:34,688 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-01-18 11:20:34,827 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-01-18 11:20:34,827 | server.py:86 | Initializing global parameters
+INFO flwr 2024-01-18 11:20:34,827 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2024-01-18 11:21:22,084 | server.py:277 | Received initial parameters from one random client
+INFO flwr 2024-01-18 11:21:22,084 | server.py:88 | Evaluating initial parameters
+INFO flwr 2024-01-18 11:21:24,731 | server.py:91 | initial parameters (loss, other metrics): 2.3062650343195403, {'accuracy': 0.0986}
+INFO flwr 2024-01-18 11:21:24,732 | server.py:101 | FL starting
+INFO flwr 2024-01-18 11:21:35,158 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:35,160 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:35,160 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:35,164 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:36,195 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:36,199 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:36,199 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:36,203 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:36,909 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:36,911 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:36,912 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:36,915 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:37,020 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:37,022 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:37,022 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:37,025 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:37,030 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:37,032 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:37,033 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:37,036 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:37,853 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:37,857 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:37,857 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:37,860 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:37,928 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:37,930 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:37,931 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:37,934 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:37,937 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:37,939 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:37,939 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:37,942 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:38,423 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:38,426 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:38,427 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:38,430 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-18 11:21:38,515 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-18 11:21:38,517 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:21:38,517 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-18 11:21:38,520 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-18 11:21:38,805 | server.py:218 | fit_round 1: strategy sampled 10 clients (out of 10)
+DEBUG flwr 2024-01-18 11:21:51,939 | server.py:232 | fit_round 1 received 10 results and 0 failures
+args.central: False
+server strategy: ADMM
+number of clients: 10
+round:      0
+Server-side evaluation loss 2.3062650343195403 / accuracy 0.0986
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_server.py", line 161, in <module>
+    fl.server.start_server(config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS), strategy=strat)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/app.py", line 176, in start_server
+    hist = _fl(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/app.py", line 217, in _fl
+    hist = server.fit(num_rounds=config.num_rounds, timeout=config.round_timeout)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/server.py", line 106, in fit
+    res_fit = self.fit_round(server_round=current_round, timeout=timeout)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/server.py", line 244, in fit_round
+    ] = self.strategy.aggregate_fit(server_round, results, failures)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/ADMM_strategy.py", line 28, in aggregate_fit
+    y_local = json.loads(res.metrics["Y"].decode("utf-8"))
+KeyError: 'Y'
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+    self.run()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/threading.py", line 910, in run
+    self._target(*self._args, **self._kwargs)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_server.py", line 1212, in _serve
+    if not _process_event_and_continue(state, event):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_server.py", line 1172, in _process_event_and_continue
+    rpc_state, rpc_future = _handle_call(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_server.py", line 1049, in _handle_call
+    return _handle_with_method_handler(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_server.py", line 987, in _handle_with_method_handler
+    return state, _handle_stream_stream(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_server.py", line 914, in _handle_stream_stream
+    return thread_pool.submit(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/concurrent/futures/thread.py", line 169, in submit
+    raise RuntimeError('cannot schedule new futures after '
+RuntimeError: cannot schedule new futures after interpreter shutdown
+DEBUG flwr 2024-01-18 11:29:41,464 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:29:41,464 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:29:41,465 | connection.py:113 | gRPC channel closed
+booting up client 5
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2024-01-18T11:29:41.463026774+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+DEBUG flwr 2024-01-18 11:29:41,667 | connection.py:113 | gRPC channel closed
+booting up client 4
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+DEBUG flwr 2024-01-18 11:29:41,669 | connection.py:113 | gRPC channel closed
+booting up client 0
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2024-01-18T11:29:41.462997516+01:00"}"
+>
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2024-01-18T11:29:41.462991299+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+DEBUG flwr 2024-01-18 11:29:42,062 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:29:42,062 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:29:42,062 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:29:42,063 | connection.py:113 | gRPC channel closed
+booting up client 3
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+    fl.client.start_numpy_client(server_address = "[::]:8080", client = client)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 252, in start_numpy_client
+    start_client(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/app.py", line 174, in start_client
+    server_message = receive()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/client/grpc_client/connection.py", line 105, in <lambda>
+    receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 541, in __next__
+    return self._next()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/grpc/_channel.py", line 967, in _next
+    raise self
+grpc._channel._MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2024-01-18T11:29:42.060875915+01:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+DEBUG flwr 2024-01-18 11:29:42,108 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-18 11:29:42,120 | connection.py:39 | ChannelConnectivity.IDLE
+srun: error: awi22: tasks 4-5: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9232945.1
+slurmstepd: error: *** STEP 9232945.1 ON awi22 CANCELLED AT 2024-01-18T11:29:42 ***
+slurmstepd: error: common_file_write_content: unable to open '/sys/fs/cgroup/freezer/slurm/uid_618619/job_9232945/step_1/freezer.state' for writing: Permission denied
+srun: error: awi22: tasks 0-3,6-9: Terminated
+srun: Force Terminated StepId=9232945.1

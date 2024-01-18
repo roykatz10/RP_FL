@@ -22,8 +22,8 @@ str=5
 lr=0.0001
 rho=0.5
 dset="kinase"
-iid=True
-ed=False
+iid=0
+ed=0
 
 
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"
@@ -58,7 +58,10 @@ echo "server booted up. starting clients..."
 done
 
 
-srun --ntasks $nc --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset  --str $str &
+
+srun --ntasks 2 --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset  --str $str &
+
+srun --ntasks 1 --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_client.py --lr $lr --rho $rho --dset $dset  --str $str &
 
 
 

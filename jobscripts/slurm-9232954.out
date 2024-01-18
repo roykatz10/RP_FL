@@ -1,0 +1,5 @@
+usage: run_server.py [-h] [--nro NRO] [--strat STRAT] [--nc NC] [--rho RHO]
+                     [--fn FN] [--dset DSET] [--central CENTRAL]
+run_server.py: error: argument --strat: invalid int value: '22lr=0.0001'
+srun: error: 3dgi1: task 0: Exited with exit code 2
+srun: launch/slurm: _step_signal: Terminating StepId=9232954.0

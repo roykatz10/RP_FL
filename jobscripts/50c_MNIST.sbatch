@@ -18,12 +18,12 @@ conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
 
 nc=50
 nro=400
-str=3
+str=5
 lr=0.0001
 rho=0.5
 dset="MNIST_50c"
-iid=False
-ed=True
+iid=1
+ed=1
 
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed{$ed}.txt"
 line_tocheck='Flower ECE: gRPC server running'
