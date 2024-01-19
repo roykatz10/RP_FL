@@ -59,3 +59,8 @@ DEBUG flwr 2024-01-18 13:17:50,816 | connection.py:113 | gRPC channel closed
 INFO flwr 2024-01-18 13:17:50,817 | app.py:185 | Disconnect and shut down
 booting up client 5
 booting up client 8
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9232964.1 ON awi23 CANCELLED AT 2024-01-18T15:21:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9232964.0 ON awi23 CANCELLED AT 2024-01-18T15:21:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 9232964 ON awi23 CANCELLED AT 2024-01-18T15:21:38 DUE TO TIME LIMIT ***

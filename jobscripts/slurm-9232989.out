@@ -60,3 +60,8 @@ INFO flwr 2024-01-18 11:27:39,774 | grpc.py:50 | Opened insecure gRPC connection
 DEBUG flwr 2024-01-18 11:27:39,786 | connection.py:39 | ChannelConnectivity.IDLE
 DEBUG flwr 2024-01-18 11:27:39,787 | connection.py:39 | ChannelConnectivity.CONNECTING
 DEBUG flwr 2024-01-18 11:27:39,788 | connection.py:39 | ChannelConnectivity.READY
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9232989 ON grs2 CANCELLED AT 2024-01-18T15:25:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9232989.0 ON grs2 CANCELLED AT 2024-01-18T15:25:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9232989.3 ON grs2 CANCELLED AT 2024-01-18T15:25:38 DUE TO TIME LIMIT ***

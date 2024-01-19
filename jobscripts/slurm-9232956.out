@@ -3367,3 +3367,7 @@ server_accuracies:  [0.1346 0.1745 0.161  0.1554 0.1899 0.2376 0.2617 0.2862 0.3
  0.681  0.681  0.6813 0.6814 0.6813 0.6813 0.6815 0.6815 0.6815 0.6815]
 Server-side evaluation loss 1.1041253057836116 / accuracy 0.6815
 took 3117.882119655609 seconds for 10 clients and 400 rounds
+DEBUG flwr 2024-01-18 15:20:38,827 | connection.py:39 | ChannelConnectivity.IDLE
+slurmstepd: error: *** STEP 9232956.1 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 9232956 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

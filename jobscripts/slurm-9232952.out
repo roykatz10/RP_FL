@@ -65,3 +65,8 @@ booting up client 5
 DEBUG flwr 2024-01-18 12:12:32,566 | connection.py:113 | gRPC channel closed
 INFO flwr 2024-01-18 12:12:32,567 | app.py:185 | Disconnect and shut down
 booting up client 4
+slurmstepd: error: *** STEP 9232952.1 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9232952 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9232952.0 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

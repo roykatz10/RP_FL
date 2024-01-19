@@ -58,3 +58,8 @@ INFO flwr 2024-01-18 13:17:50,817 | app.py:185 | Disconnect and shut down
 INFO flwr 2024-01-18 13:17:50,817 | app.py:185 | Disconnect and shut down
 booting up client 1
 booting up client 3
+slurmstepd: error: *** STEP 9232963.0 ON awi23 CANCELLED AT 2024-01-18T15:21:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 9232963 ON awi23 CANCELLED AT 2024-01-18T15:21:38 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9232963.1 ON awi23 CANCELLED AT 2024-01-18T15:21:38 DUE TO TIME LIMIT ***

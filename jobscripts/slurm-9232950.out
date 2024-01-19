@@ -2511,3 +2511,6 @@ server_accuracies:  [0.1409 0.2862 0.4148 0.5043 0.5973 0.6661 0.7092 0.7487 0.7
  0.9701 0.9701 0.9701 0.9701 0.9701 0.97   0.9701 0.9701 0.9701 0.9701]
 Server-side evaluation loss 0.12237686860598007 / accuracy 0.9701
 took 4399.000915765762 seconds for 10 clients and 400 rounds
+slurmstepd: error: *** STEP 9232950.1 ON awi20 CANCELLED AT 2024-01-18T15:19:38 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9232950 ON awi20 CANCELLED AT 2024-01-18T15:19:38 DUE TO TIME LIMIT ***

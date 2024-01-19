@@ -3,3 +3,4 @@ usage: run_server.py [-h] [--nro NRO] [--strat STRAT] [--nc NC] [--rho RHO]
 run_server.py: error: argument --strat: invalid int value: '22lr=0.0001'
 srun: error: 3dgi1: task 0: Exited with exit code 2
 srun: launch/slurm: _step_signal: Terminating StepId=9232954.0
+slurmstepd: error: *** JOB 9232954 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***

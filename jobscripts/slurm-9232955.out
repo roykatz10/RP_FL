@@ -68,3 +68,16 @@ INFO flwr 2024-01-18 12:12:32,566 | app.py:185 | Disconnect and shut down
 booting up client 1
 booting up client 6
 booting up client 2
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+DEBUG flwr 2024-01-18 15:20:38,828 | connection.py:113 | gRPC channel closed
+DEBUG flwr 2024-01-18 15:20:38,828 | connection.py:113 | gRPC channel closed
+booting up client 8
+booting up client 9
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 55, in <module>
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9232955.0 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 9232955 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9232955.1 ON 3dgi1 CANCELLED AT 2024-01-18T15:20:38 DUE TO TIME LIMIT ***

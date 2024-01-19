@@ -2518,3 +2518,6 @@ took 4333.189119100571 seconds for 10 clients and 400 rounds
 DEBUG flwr 2024-01-18 12:33:53,704 | connection.py:113 | gRPC channel closed
 INFO flwr 2024-01-18 12:33:53,704 | app.py:185 | Disconnect and shut down
 booting up client 3
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9232948 ON awi20 CANCELLED AT 2024-01-18T15:19:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9232948.1 ON awi20 CANCELLED AT 2024-01-18T15:19:38 DUE TO TIME LIMIT ***
