@@ -16,7 +16,13 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 import flwr as fl
 from flwr.common import Metrics, NDArrays, Scalar
 
-DEVICE = torch.device("cpu")  # Try "cuda" to train on GPU
+
+if torch.cuda.is_available():
+    device = "cuda"
+else:
+    device = "cpu"
+
+DEVICE = torch.device(device)  # Try "  cuda" to train on GPU
 
 
 
@@ -109,6 +115,7 @@ class Net(nn.Module):
 
 class FlowerClient(fl.client.NumPyClient):
     def __init__(self, X_train, y_train, lr, dset):
+
         self.net = Net(dset=dset)
         self.net = self.net.double()
         self.lr = lr

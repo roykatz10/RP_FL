@@ -6,6 +6,7 @@ import os
 from torch.utils.data import TensorDataset
 from typing import Dict, List, Optional, Tuple
 import matplotlib.pyplot as plt
+from torchvision.models import resnet18
 
 import torch.nn as nn
 import os
@@ -97,6 +98,6 @@ def get_arch(dset):
             nn.Softmax()
         )
     elif dset == "camelyon":
-        raise(NotImplementedError("not yet implemented camelyon architecture"))
+        raise(ValueError("shouldn't use this for camelyon dataset"))
     else:
         raise(ValueError("unknown dataset"))

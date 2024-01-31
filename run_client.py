@@ -11,6 +11,7 @@ sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 from src.utils import get_train_data, get_central_train_data
 from src.ADMM_client import ADMM_FlowerClient
 from src.Default_client import FlowerClient
+from src.Camelyon_client import Camelyon_client
 
 if torch.cuda.is_available():
     device = "cuda"
@@ -47,7 +48,9 @@ else:
 # X_test = torch.load("Data/x_test.pt")
 # y_test = torch.load("Data/y_test.pt")
 
-if args.str == 5:
+if args.dset == "camelyon":
+    client = Camelyon_client(X_train, y_train, args.lr, args.str, args.rho)
+elif args.str == 5:
     client = ADMM_FlowerClient(X_train, y_train, args.lr, args.rho, args.dset)
 else:
     client = FlowerClient(X_train, y_train, args.lr, args.dset)
