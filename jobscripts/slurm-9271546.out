@@ -1,0 +1,76 @@
+log_nc10_nro400_str5_lr0.0001_rho0.5_dsetMNIST_10c_iid0_ed0.txt
+INFO flwr 2024-01-31 09:58:17,514 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-01-31 09:58:17,589 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-01-31 09:58:17,589 | server.py:86 | Initializing global parameters
+INFO flwr 2024-01-31 09:58:17,590 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2024-01-31 09:59:00,998 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:00,999 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:00,999 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:01,003 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:01,039 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:01,041 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:01,041 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:01,044 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:01,049 | server.py:277 | Received initial parameters from one random client
+INFO flwr 2024-01-31 09:59:01,050 | server.py:88 | Evaluating initial parameters
+INFO flwr 2024-01-31 09:59:02,058 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:02,060 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:02,060 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:02,063 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:02,266 | server.py:91 | initial parameters (loss, other metrics): 2.298015703069117, {'accuracy': 0.1513}
+INFO flwr 2024-01-31 09:59:02,266 | server.py:101 | FL starting
+INFO flwr 2024-01-31 09:59:02,947 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:02,949 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:02,949 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:02,952 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:03,265 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:03,266 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:03,266 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:03,269 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:03,330 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2024-01-31 09:59:03,330 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:03,331 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:03,331 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:03,332 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:03,332 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:03,335 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-31 09:59:03,335 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-31 09:59:03,499 | server.py:218 | fit_round 1: strategy sampled 10 clients (out of 10)
+INFO flwr 2024-01-31 09:59:03,559 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:03,580 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:03,581 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:03,584 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:03,655 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:03,677 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:03,678 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:03,680 | connection.py:39 | ChannelConnectivity.READY
+INFO flwr 2024-01-31 09:59:03,838 | grpc.py:50 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-01-31 09:59:03,851 | connection.py:39 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-01-31 09:59:03,851 | connection.py:39 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-01-31 09:59:03,855 | connection.py:39 | ChannelConnectivity.READY
+DEBUG flwr 2024-01-31 09:59:26,268 | server.py:232 | fit_round 1 received 10 results and 0 failures
+args.central: False
+server strategy: ADMM
+number of clients: 10
+round:      0
+Server-side evaluation loss 2.298015703069117 / accuracy 0.1513
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_server.py", line 161, in <module>
+    fl.server.start_server(config=fl.server.ServerConfig(num_rounds=NUM_ROUNDS), strategy=strat)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/app.py", line 176, in start_server
+    hist = _fl(
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/app.py", line 217, in _fl
+    hist = server.fit(num_rounds=config.num_rounds, timeout=config.round_timeout)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/server.py", line 106, in fit
+    res_fit = self.fit_round(server_round=current_round, timeout=timeout)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/flwr/server/server.py", line 244, in fit_round
+    ] = self.strategy.aggregate_fit(server_round, results, failures)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/ADMM_strategy.py", line 28, in aggregate_fit
+    y_local = json.loads(res.metrics["Y"].decode("utf-8"))
+KeyError: 'Y'
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9271546 ON 3dgi1 CANCELLED AT 2024-01-31T13:56:51 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9271546.1 ON 3dgi1 CANCELLED AT 2024-01-31T13:56:51 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 9271546.0 ON 3dgi1 CANCELLED AT 2024-01-31T13:56:51 DUE TO TIME LIMIT ***
