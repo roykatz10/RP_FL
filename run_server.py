@@ -9,6 +9,7 @@ import sys
 dir_path = os.path.dirname(os.path.realpath(__file__))
 from typing import Dict, List, Optional, Tuple
 from src.ADMM_client import ADMM_Net as Net
+from src.Camelyon_client import Camelyon_client as client
 from src.ADMM_strategy import ADMMStrategy
 import matplotlib.pyplot as plt
 from src.utils import get_test_data
@@ -41,8 +42,16 @@ server_accuracies = np.zeros(NUM_ROUNDS)
 X_test, y_test = get_test_data(args.dset, device= DEVICE)
 # X_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/x_test.pt")
 # y_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/y_test.pt")
+print(f'X_test shape: {X_test.shape}')
 testloader = TensorDataset(X_test, y_test)
-params  = Net(0.1, 0.5, args.dset).get_parameters()
+
+if args.dset == "camelyon":
+    net = client(X_test, y_test, 0.1, 0, 0.5)
+    params = net.get_parameters({})
+else:
+    net = Net(0.1, 0.5, args.dset)
+    net = net.double()
+    params = net.get_parameters()
 
 
 # The `evaluate` function will be by Flower called after every round
@@ -52,9 +61,11 @@ def evaluate(
     config: Dict[str, fl.common.Scalar],
 ) -> Optional[Tuple[float, Dict[str, fl.common.Scalar]]]:\
 
-    net = Net(0.1, 0.5, dset=args.dset).to(DEVICE)
-    net = net.double()
-    net.set_parameters(parameters)  # Update model with the latest parameters
+    #print(f'parameters: {len(parameters)}')
+    if args.dset == "camelyon":
+        net.set_parameters(parameters, {})
+    else:
+        net.set_parameters(parameters)  # Update model with the latest parameters
     loss, accuracy = net.test(testloader)
     server_accuracies[server_round - 1] = accuracy
     print('round:     ', server_round)

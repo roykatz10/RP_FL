@@ -3,7 +3,7 @@
 #BATCH --partition=general
 #SBATCH --qos=short
 #SBATCH --time=4:00:00
-#SBATCH --ntasks=4
+#SBATCH --ntasks=5
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-type=END
@@ -30,6 +30,8 @@ filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid
 line_tocheck='Flower ECE: gRPC server running'
 
 cd ..
+
+echo "$filename"
 
 # remove output file if it already exists
 if test -f "$filename"; then

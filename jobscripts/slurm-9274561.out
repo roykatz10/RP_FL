@@ -1,0 +1,127 @@
+INFO flwr 2024-02-01 18:13:55,193 | app.py:148 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-02-01 18:13:55,581 | app.py:168 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-02-01 18:13:55,581 | server.py:86 | Initializing global parameters
+INFO flwr 2024-02-01 18:13:55,581 | server.py:273 | Requesting initial parameters from one random client
+server booted up. starting clients...
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id4.pt'
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id6.pt'
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id7.pt'
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id5.pt'
+    return _open_file(name_or_buffer, mode)
+    super().__init__(open(name, mode))
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id3.pt'
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_client.py", line 47, in <module>
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id1.pt'
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id8.pt'
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    X_train, y_train = get_train_data(args.dset, id,  iid = args.iid, ed = args.ed, device=DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 43, in get_train_data
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id9.pt'
+    X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id2.pt'
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/Data_10clients_niid_ed/X_train_id0.pt'
+srun: error: insy15: tasks 0-9: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9274561.1

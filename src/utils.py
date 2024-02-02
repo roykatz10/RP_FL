@@ -53,7 +53,7 @@ def get_central_train_data(dset, device='gpu'):
     elif dset == "kinase":
         pass
     elif dset == "camelyon":
-        pass
+        full_path = prefix + "Data_camelyon/"
     else:
         raise(ValueError(f'unkown dataset: {dset}'))
     X_train = torch.load(f"{full_path}x_train_full.pt", map_location=device).double()
@@ -68,7 +68,7 @@ def get_test_data(dset, device = "cpu"):
     elif dset == "kinase":
         full_path = prefix + "Data_kinase/"
     elif dset == "camelyon":
-        raise(NotImplementedError(f"{__name__}: still need to implement camelyon"))
+        full_path = prefix + "Data_camelyon/"
     else:
         raise(ValueError(f"{__name__}: unknown dataset: {dset}"))
     X_test = torch.load(f"{full_path}x_test.pt", map_location=device).double()

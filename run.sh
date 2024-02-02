@@ -26,6 +26,10 @@ done
 filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"
 line_tocheck='Flower ECE: gRPC server running'
 
+# first, kill al other processes if they are still going on
+pkill -9 -f run_server.py
+pkill -9 -f run_client.py
+
 # remove output file if it already exists
 if test -f "$filename"; then
   rm "$filename"

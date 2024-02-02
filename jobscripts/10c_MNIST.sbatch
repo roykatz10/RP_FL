@@ -22,7 +22,7 @@ str=5
 lr=0.0001
 rho=0.5
 dset="MNIST_10c"
-iid=1
+iid=0
 ed=1
 
 

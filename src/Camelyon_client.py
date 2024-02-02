@@ -25,8 +25,9 @@ DEVICE = torch.device(device)  # Try "  cuda" to train on GPU
 class Camelyon_client(fl.client.NumPyClient):
 
     def __init__(self, X_train, y_train, lr, str, rho):
-        self.net = resnet18(pretrained=False).double()
+        self.net = resnet18(pretrained=False)
         self.net.fc = nn.Linear(512, 2)
+        self.net = self.net.double()
         if str == 5: # initialize the extra variable for ADMM if needed
             self.rho = rho
             self.net.y = OrderedDict()
@@ -35,7 +36,7 @@ class Camelyon_client(fl.client.NumPyClient):
 
 
         train_loader = TensorDataset(X_train, y_train)
-        self.train_loader = train_loader
+        self.trainloader = train_loader
         self.lr = lr
         self.str = str
 
@@ -47,7 +48,11 @@ class Camelyon_client(fl.client.NumPyClient):
             for images, labels in self.trainloader:
                 images, labels = images.to(DEVICE), labels.to(DEVICE)
                 opt.zero_grad()
-                outputs = self.forward(images)
+                #print("---------------")
+                #print(f'image shape: {images.shape}')
+                #print("---------------")
+                images = images.view(1, 3, 96, 96) 
+                outputs = self.net.forward(images)
                 labels = labels.long()
                 loss = criterion(outputs, labels)
                 loss.backward()
@@ -59,9 +64,28 @@ class Camelyon_client(fl.client.NumPyClient):
                 correct += (torch.max(outputs.data, 1)[1] == labels).sum().item()
             epoch_loss /= len(self.trainloader)
             epoch_acc = correct / total
-            # if verbose:
-            #     print(f"Epoch {epoch + 1}: train loss {epoch_loss}, accuracy {epoch_acc}")
-
+    
+    def test(self, testloader):
+        """Evaluate the network on the entire test set."""
+        criterion = torch.nn.CrossEntropyLoss()
+        correct, total, loss = 0, 0, 0.0
+        # net.eval()
+        with torch.no_grad():
+            for images, labels in testloader:
+                images, labels = images.to(DEVICE), labels.to(DEVICE)
+                images = images.double()
+                images = images.view(1, 3, 96, 96)
+                labels = labels.long()
+                #print(f'image shape: {images.shape}')
+                outputs = self.net.forward(images)
+                # labels = labels.view(1, -1)
+                loss += criterion(outputs, labels).item()
+                _, predicted = torch.max(outputs.data, 1)
+                total += labels.size(0)
+                correct += (predicted == labels).sum().item()
+        loss /= len(testloader)
+        accuracy = correct / total
+        return loss, accuracy
     
     def fit(self, parameters, config):
         self.set_parameters(parameters, config)
@@ -69,7 +93,7 @@ class Camelyon_client(fl.client.NumPyClient):
 
         if str == 5:
             params_dict = zip(self.net.state_dict().keys(), parameters)
-            state_dict = OrderedDict({k: torch.tensor(v) for k, v in params_dict})
+            state_dict = OrderedDict({k: torch.tensor(v) if v.shape != torch.Size([]) else torch.Tensor([0]) for k, v in params_dict})
             self.train_admm(config, state_dict, opt)
             params_tobytes = OrderedDict()
             for key in self.net.y.keys():
@@ -78,18 +102,20 @@ class Camelyon_client(fl.client.NumPyClient):
 
             return_dict = {"Y" : params_tobytes}
         else:
-
             self.train(opt, epochs=1)
             return_dict = {}
         return self.get_parameters({}), len(self.trainloader), return_dict           
 
-    def get_parameters(self):
+    def get_parameters(self, config):
         return [val.cpu().numpy() for _, val in self.net.state_dict().items()]
     
-    def set_parameters(self, parameters: List[np.ndarray]):
-        params_dict = zip(self.state_dict().keys(), parameters)
-        state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
-        self.net.load_state_dict(state_dict)
+    def set_parameters(self, parameters: List[np.ndarray], config):
+        params_dict = zip(self.net.state_dict().keys(), parameters)
+        
+        state_dict = OrderedDict({k: torch.Tensor(v) if v.shape != torch.Size([]) else torch.Tensor([0])
+        for k, v in params_dict})
+        #print(f'state_dict length: {len(state_dict)}')
+        self.net.load_state_dict(state_dict, strict = True)
 
 
     def train_admm(self, config, z, opt, epochs = 1):

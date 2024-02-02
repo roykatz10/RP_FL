@@ -1,0 +1,16 @@
+args.central: False
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/run_server.py", line 41, in <module>
+    X_test, y_test = get_test_data(args.dset, device= DEVICE)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/utils.py", line 74, in get_test_data
+    X_test = torch.load(f"{full_path}x_test.pt", map_location=device).double()
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en/lib/python3.9/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/src/../Data/Data_MNIST/x_test.pt'
+srun: error: awi21: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=9274236.0
+slurmstepd: error: *** JOB 9274236 ON awi21 CANCELLED AT 2024-02-01T15:46:24 DUE TO TIME LIMIT ***
