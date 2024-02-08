@@ -16,7 +16,7 @@ do
         --lr) lr=$2; shift 2;;
         --rho) rho=$2; shift 2;;
         --dset) dset=$2; shift 2;;
-        --central) central=1; shift 1;;
+        --central) central=1; nc=1; shift 1;;
         --) shift;  break   ;;
         *)  break ;;
     esac

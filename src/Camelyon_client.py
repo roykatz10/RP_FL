@@ -1,6 +1,6 @@
 import flwr as fl
 from torchvision.models import resnet18
-from torch.utils.data import TensorDataset
+from torch.utils.data import DataLoader, TensorDataset
 
 import numpy as np
 import torch
@@ -28,15 +28,20 @@ class Camelyon_client(fl.client.NumPyClient):
         self.net = resnet18(pretrained=False)
         self.net.fc = nn.Linear(512, 2)
         self.net = self.net.double()
+        print(f'device: {DEVICE}')
+        self.net = self.net.to(device = DEVICE)
         if str == 5: # initialize the extra variable for ADMM if needed
             self.rho = rho
             self.net.y = OrderedDict()
             for para, param in zip(self.net.parameters(), self.net.state_dict()):
                 self.net.y[param] = torch.zeros(para.shape)
-
-
-        train_loader = TensorDataset(X_train, y_train)
-        self.trainloader = train_loader
+        
+        Training_set = TensorDataset(X_train, torch.tensor(y_train))
+        self.train_loader = DataLoader(Training_set, batch_size = 64, shuffle=True)
+        #self.X_train = X_train # we don't send this to the gpu yet to avoid oom issues
+        #self.y_train = y_train
+        #train_loader = TensorDataset(X_train, y_train, batch_size = 64)
+        #self.trainloader = train_loader
         self.lr = lr
         self.str = str
 
@@ -45,15 +50,16 @@ class Camelyon_client(fl.client.NumPyClient):
 
         for epoch in range(epochs):
             correct, total, epoch_loss = 0, 0, 0.0
-            for images, labels in self.trainloader:
+            for images, labels in self.train_loader:
                 images, labels = images.to(DEVICE), labels.to(DEVICE)
                 opt.zero_grad()
                 #print("---------------")
-                #print(f'image shape: {images.shape}')
+                #print(f'label shape: {labels.shape}')
                 #print("---------------")
-                images = images.view(1, 3, 96, 96) 
+                #images = images.view(1, 3, 96, 96)
+                labels = labels.view(-1).long() 
                 outputs = self.net.forward(images)
-                labels = labels.long()
+            #self.y_train  = self.y_train.long()
                 loss = criterion(outputs, labels)
                 loss.backward()
                 opt.step()
@@ -62,8 +68,8 @@ class Camelyon_client(fl.client.NumPyClient):
                 epoch_loss += loss
                 total += labels.size(0)
                 correct += (torch.max(outputs.data, 1)[1] == labels).sum().item()
-            epoch_loss /= len(self.trainloader)
-            epoch_acc = correct / total
+                epoch_loss /= len(labels)
+                epoch_acc = correct / total
     
     def test(self, testloader):
         """Evaluate the network on the entire test set."""
@@ -104,7 +110,7 @@ class Camelyon_client(fl.client.NumPyClient):
         else:
             self.train(opt, epochs=1)
             return_dict = {}
-        return self.get_parameters({}), len(self.trainloader), return_dict           
+        return self.get_parameters({}), len(self.train_loader), return_dict           
 
     def get_parameters(self, config):
         return [val.cpu().numpy() for _, val in self.net.state_dict().items()]

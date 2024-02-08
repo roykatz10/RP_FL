@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #SBATCH --partition=general
-#SBATCH --qos=short
-#SBATCH --time=4:00:00
+#SBATCH --qos=medium
+#SBATCH --time=8:00:00
 #SBATCH --ntasks=11
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
@@ -13,7 +13,7 @@
 module use /opt/insy/modulefiles
 module load cuda/11.5 cudnn/11.5-8.3.0.98
 module load miniconda/3.9
-conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
+conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower
 
 
 nc=10
@@ -36,6 +36,7 @@ if test -f "$filename"; then
   rm "$filename"
 fi
 
+echo "$filename"
 
 srun  --ntasks 1 --cpus-per-task=1 --exclusive --mem-per-cpu=2G python run_server.py --str $str --nro $nro --nc $nc --rho $rho --dset $dset --fn $filename &
 

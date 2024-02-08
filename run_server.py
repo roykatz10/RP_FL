@@ -42,8 +42,8 @@ server_accuracies = np.zeros(NUM_ROUNDS)
 X_test, y_test = get_test_data(args.dset, device= DEVICE)
 # X_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/x_test.pt")
 # y_test = torch.load(f"{dir_path}/../MNIST/10clients/Data/y_test.pt")
-print(f'X_test shape: {X_test.shape}')
-testloader = TensorDataset(X_test, y_test)
+print(f'X_test shape: {X_test.shape}, y_test shape: {y_test.shape}')
+testloader = TensorDataset(X_test, torch.Tensor(y_test))
 
 if args.dset == "camelyon":
     net = client(X_test, y_test, 0.1, 0, 0.5)

@@ -1,0 +1,5 @@
+center 0 type: torch.uint8, values: 255
+center 1 type: torch.uint8, values: 255
+center 2 type: torch.uint8, values: 255
+center 3 type: torch.uint8, values: 255
+center 4 type: torch.uint8, values: 255

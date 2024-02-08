@@ -37,7 +37,9 @@ def get_train_data(dset, id, iid = True, ed = True, device = "cpu"):
         folder = "Data_kinase"
         full_path = prefix + folder
     elif dset == "camelyon":
-        raise(NotImplementedError(f"{__name__}: still need to implement camelyon dataset"))
+        folder = "Data_camelyon"
+        full_path = prefix + folder
+        
     else:
         raise(ValueError(f"{__name__}: unknown dataset: {dset}"))
     X_train = torch.load(f"{full_path}/X_train_id{id}.pt", map_location=device).double() 

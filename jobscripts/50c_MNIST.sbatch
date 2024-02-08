@@ -1,19 +1,19 @@
 #!/bin/sh
 
 #SBATCH --partition=general
-#SBATCH --qos=short
-#SBATCH --time=4:00:00
+#SBATCH --qos=medium
+#SBATCH --time=8:00:00
 #SBATCH --ntasks=51
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mail-type=END
 #SBATCH --mem-per-cpu=2G
-
+#SBATCH 
 
 module use /opt/insy/modulefiles
 module load cuda/11.5 cudnn/11.5-8.3.0.98
 module load miniconda/3.9
-conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
+conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower
 
 
 nc=50

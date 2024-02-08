@@ -1,0 +1,5 @@
+log_nc50_nro400_str0_lr0.0001_rho0.5_dsetMNIST_50c_iid0_ed{0}.txt
+/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower/bin/python: can't open file '/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/run_server.py': [Errno 2] No such file or directory
+srun: error: awi23: task 0: Exited with exit code 2
+srun: launch/slurm: _step_signal: Terminating StepId=9280252.0
+slurmstepd: error: *** JOB 9280252 ON awi23 CANCELLED AT 2024-02-06T18:01:00 DUE TO TIME LIMIT ***

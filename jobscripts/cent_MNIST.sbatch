@@ -13,7 +13,7 @@
 module use /opt/insy/modulefiles
 module load cuda/11.5 cudnn/11.5-8.3.0.98
 module load miniconda/3.9
-conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/envs/flower2en
+conda activate /tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower
 
 
 nc=1

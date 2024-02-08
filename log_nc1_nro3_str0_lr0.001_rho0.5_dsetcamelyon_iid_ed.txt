@@ -1,5 +1,5 @@
-Starting Flower server, config: ServerConfig(num_rounds=2, round_timeout=None)
-Flower ECE: gRPC server running (2 rounds), SSL is disabled
+Starting Flower server, config: ServerConfig(num_rounds=3, round_timeout=None)
+Flower ECE: gRPC server running (3 rounds), SSL is disabled
 Initializing global parameters
 Requesting initial parameters from one random client
 Received initial parameters from one random client
