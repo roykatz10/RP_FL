@@ -37,7 +37,7 @@ class Camelyon_client(fl.client.NumPyClient):
                 self.net.y[param] = torch.zeros(para.shape)
         
         Training_set = TensorDataset(X_train, torch.tensor(y_train))
-        self.train_loader = DataLoader(Training_set, batch_size = 64, shuffle=True)
+        self.train_loader = DataLoader(Training_set, batch_size = 128, shuffle=True)
         #self.X_train = X_train # we don't send this to the gpu yet to avoid oom issues
         #self.y_train = y_train
         #train_loader = TensorDataset(X_train, y_train, batch_size = 64)
