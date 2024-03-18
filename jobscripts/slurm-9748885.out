@@ -1,0 +1,17 @@
+device: cuda
+data loaded
+  0%|          | 0/10 [00:00<?, ?it/s]  0%|          | 0/10 [00:04<?, ?it/s]
+X_batch shape: torch.Size([128, 3, 96, 96])
+y_batch shape: torch.Size([128, 1])
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/PT_Camelyon.py", line 49, in <module>
+    loss = crit(out, y_batch)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/flower/lib/python3.10/site-packages/torch/nn/functional.py", line 3059, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported

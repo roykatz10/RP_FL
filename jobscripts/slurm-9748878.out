@@ -1,0 +1,70 @@
+log_nc10_nro400_str5_lr0.0001_rho0.5_dsetMNIST_10c_iid0_ed0_seed5.txt
+INFO flwr 2024-03-12 14:16:45,542 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=400, round_timeout=None)
+INFO flwr 2024-03-12 14:16:45,620 | app.py:176 | Flower ECE: gRPC server running (400 rounds), SSL is disabled
+INFO flwr 2024-03-12 14:16:45,620 | server.py:89 | Initializing global parameters
+INFO flwr 2024-03-12 14:16:45,620 | server.py:276 | Requesting initial parameters from one random client
+server booted up. starting clients...
+INFO flwr 2024-03-12 14:18:02,922 | server.py:280 | Received initial parameters from one random client
+INFO flwr 2024-03-12 14:18:02,922 | server.py:91 | Evaluating initial parameters
+INFO flwr 2024-03-12 14:18:03,805 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2024-03-12 14:18:03,806 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-03-12 14:18:03,807 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,807 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,808 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2024-03-12 14:18:03,808 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,809 | connection.py:42 | ChannelConnectivity.CONNECTING
+INFO flwr 2024-03-12 14:18:03,809 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2024-03-12 14:18:03,809 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-03-12 14:18:03,810 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,810 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,810 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,810 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,812 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2024-03-12 14:18:03,814 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2024-03-12 14:18:03,814 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2024-03-12 14:18:03,841 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2024-03-12 14:18:03,841 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-03-12 14:18:03,842 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,842 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,842 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,842 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,845 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2024-03-12 14:18:03,846 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2024-03-12 14:18:03,898 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-03-12 14:18:03,901 | connection.py:42 | ChannelConnectivity.IDLE
+INFO flwr 2024-03-12 14:18:03,901 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-03-12 14:18:03,902 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,905 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2024-03-12 14:18:03,906 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,906 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,909 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2024-03-12 14:18:03,924 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+INFO flwr 2024-03-12 14:18:03,925 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+DEBUG flwr 2024-03-12 14:18:03,926 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,926 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,928 | connection.py:42 | ChannelConnectivity.IDLE
+DEBUG flwr 2024-03-12 14:18:03,928 | connection.py:42 | ChannelConnectivity.CONNECTING
+DEBUG flwr 2024-03-12 14:18:03,929 | connection.py:42 | ChannelConnectivity.READY
+DEBUG flwr 2024-03-12 14:18:03,931 | connection.py:42 | ChannelConnectivity.READY
+INFO flwr 2024-03-12 14:18:04,330 | server.py:94 | initial parameters (loss, other metrics): 2.3018025624512766, {'accuracy': 0.098}
+INFO flwr 2024-03-12 14:18:04,331 | server.py:104 | FL starting
+DEBUG flwr 2024-03-12 16:47:25,635 | connection.py:141 | gRPC channel closed
+INFO flwr 2024-03-12 16:47:25,635 | app.py:304 | Disconnect and shut down
+booting up client 4
+DEBUG flwr 2024-03-12 17:19:50,748 | connection.py:141 | gRPC channel closed
+INFO flwr 2024-03-12 17:19:50,748 | app.py:304 | Disconnect and shut down
+booting up client 6
+DEBUG flwr 2024-03-12 17:19:50,748 | connection.py:141 | gRPC channel closed
+INFO flwr 2024-03-12 17:19:50,748 | app.py:304 | Disconnect and shut down
+DEBUG flwr 2024-03-12 17:19:50,748 | connection.py:141 | gRPC channel closed
+INFO flwr 2024-03-12 17:19:50,748 | app.py:304 | Disconnect and shut down
+booting up client 1
+DEBUG flwr 2024-03-12 17:19:50,748 | connection.py:141 | gRPC channel closed
+INFO flwr 2024-03-12 17:19:50,748 | app.py:304 | Disconnect and shut down
+booting up client 0
+booting up client 2
+slurmstepd: error: *** STEP 9748878.1 ON 3dgi2 CANCELLED AT 2024-03-12T22:16:11 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 9748878 ON 3dgi2 CANCELLED AT 2024-03-12T22:16:11 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 9748878.0 ON 3dgi2 CANCELLED AT 2024-03-12T22:16:11 DUE TO TIME LIMIT ***

@@ -23,10 +23,23 @@ lr=0.0001
 rho=0.5
 dset="MNIST_10c"
 iid=0
-ed=1
+ed=0
+seed=0
+
+while true;
+do
+    case "$1" in 
+        -s) seed=$2; shift 2;;
+        --) shift; break ;;
+        *) break ;;
+    esac
+done
 
 
-filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}.txt"
+
+
+
+filename="log_nc${nc}_nro${nro}_str${str}_lr${lr}_rho${rho}_dset${dset}_iid${iid}_ed${ed}_seed${seed}.txt"
 line_tocheck='Flower ECE: gRPC server running'
 
 cd ..

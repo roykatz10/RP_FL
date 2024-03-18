@@ -1,0 +1,4 @@
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/PT_Camelyon.py", line 33
+    train_loader = DataLoader(TensorDataset(X_train, torch.Tensor(y_train.astype(int)), batch_size = batch_size,  shuffle = True)
+                             ^
+SyntaxError: '(' was never closed

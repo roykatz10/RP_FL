@@ -1,0 +1,13 @@
+device: cuda
+data loaded
+Traceback (most recent call last):
+  File "/tudelft.net/staff-bulk/ewi/insy/DBL/swiergarst/RP_FL/PT_Camelyon.py", line 33, in <module>
+    train_loader = DataLoader(TensorDataset(X_train, torch.Tensor(y_train, dtype = torch.int8)), batch_size = batch_size,  shuffle = True)
+TypeError: new() received an invalid combination of arguments - got (numpy.ndarray, dtype=torch.dtype), but expected one of:
+ * (*, torch.device device)
+      didn't match because some of the keywords were incorrect: dtype
+ * (torch.Storage storage)
+ * (Tensor other)
+ * (tuple of ints size, *, torch.device device)
+ * (object data, *, torch.device device)
+
